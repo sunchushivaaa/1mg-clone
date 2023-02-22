@@ -2,6 +2,8 @@ import Slider from "react-slick"
 import FeaturedBrands from "../../Components/UserSide/FeaturedBrands";
 import FullBody from "../../Components/UserSide/FullBody";
 import ShopHealth from "../../Components/UserSide/ShopHealth";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 export default function Home() {
 
   const Shop_by_health_concerns = [
@@ -125,7 +127,7 @@ export default function Home() {
     arrows: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 7,
+    slidesToShow: 6,
     slidesToScroll: 4,
     responsive:[
       {
@@ -330,11 +332,13 @@ export default function Home() {
 
   
   return (
-    <div className="Home">
+    <div className="Home" style={{width:"100%",overflow:"hidden",padding:"20px"}}>
       <h1>Home Page</h1>
 
       <h3 className="tagname">Shop by health concerns</h3>
-      <Slider {...slider1}>
+     <div style={{background:"white "}}>
+       
+     <Slider {...slider1}>
      
      {Shop_by_health_concerns.map((item) => (
        <ShopHealth
@@ -344,6 +348,7 @@ export default function Home() {
        />
      ))}
    </Slider>
+     </div>
    <h3 className="tagname"> Featured Brands</h3>
       <Slider {...slider2}>
      

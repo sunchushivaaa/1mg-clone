@@ -5,10 +5,10 @@ function ShopHealth({img,name}) {
   return (
   
   <div className='Shop_by_health_concerns_main'>
-      <div className='Shop_by_health_concerns'>
-        <img className='ava' src={img} alt="" />
-        <h4>{name}</h4>
-    </div>
+
+        <img  src={img} alt="" />
+        <h5>{name}</h5>
+   
   </div>
   )
 }

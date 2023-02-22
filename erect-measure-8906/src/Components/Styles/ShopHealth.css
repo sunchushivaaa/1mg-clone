@@ -1,27 +1,15 @@
-.Shop_by_health_concerns {
-  padding: 30px 5px;
-  /* width: 175px; */
-  height: 300px;
-  flex-direction: column;
-  display: flex;
-  gap: 5px;
-  margin: 20px 10px;
-  /* box-shadow: -2px 0px 2px 0px rgb(0 0 0 / 10%); */
-  /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
-  border-radius: 4px;
-  text-align: center;
-}
+
 .Shop_by_health_concerns_main {
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  margin: 10px 0;
 }
 .Shop_by_health_concerns_main:hover {
-  border: 1px solid rgb(231, 225, 225);
   border-radius: 6px;
-  box-sizing: border-box;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-.ava {
-  height: 200px;
-  /* object-fit: contain; */
-  width: 100%;
+    box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 12px 0px;
 }
