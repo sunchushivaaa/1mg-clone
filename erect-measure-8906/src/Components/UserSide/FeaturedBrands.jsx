@@ -1,15 +1,15 @@
-import React from 'react'
-import "../Styles/FeaturedBrands.css"
+import React from "react";
+import "../Styles/FeaturedBrands.css";
 
-function FeaturedBrands({img,name}) {
+function FeaturedBrands({ img, name }) {
   return (
-    <div className='FeaturedBrands_main'>
-    <div className='FeaturedBrands'>
-      <img className='FeaturedBrands_img' src={img} alt="" />
-      <h4>{name}</h4>
-  </div>
-</div>
-  )
+    <div className="FeaturedBrands_main">
+      
+        <img  src={img} alt="" />
+        <h4>{name}</h4>
+      
+    </div>
+  );
 }
 
-export default FeaturedBrands
+export default FeaturedBrands;

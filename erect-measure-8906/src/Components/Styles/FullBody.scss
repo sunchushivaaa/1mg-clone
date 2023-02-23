@@ -1,0 +1,60 @@
+.xyz {
+  // border: 1px solid;
+  padding: 20px;
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.1);
+  margin: 10px;
+
+  .mono {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    h3{
+      text-overflow: ellipsis;
+      /* width: 70%; */
+      white-space: nowrap;
+      overflow: hidden;
+      font-size: 16px;
+  
+    }
+    .plus{
+      padding: 5px 10px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      background: wheat;
+      border-radius: 4px;
+      font-weight: 500;
+  
+    }
+  }
+  .fullbody_brand {
+    /* object-fit: contain; */
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    gap: 10px;
+
+    img {
+      height: 70px;
+    }
+  }
+  .abcd {
+    display: flex;
+    justify-content: space-around;
+  }
+  .fullbody_logo_line {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .fullbody_price_line {
+    display: flex;
+    gap: 25px;
+  }
+  .ratings {
+    background-color: #1aaa2a;
+    padding: 3px 8px;
+    color: white;
+  }
+}
