@@ -1,0 +1,215 @@
+:root {
+  --orange-color: rgb(255, 153, 76);
+  --yellow-color: rgb(246, 230, 129);
+}
+.Information {
+  background-color: rgb(237, 237, 237);
+  padding: 2% 3%;
+}
+.Divide {
+  border-top: 1px solid rgb(203, 203, 203);
+}
+.Information > .Description {
+  margin-bottom: 4%;
+}
+.Information > .Description > h3 {
+  margin-bottom: 2%;
+}
+.Information > .Description > h4 {
+  margin-bottom: 1%;
+}
+.Information > .Description > p {
+  margin-bottom: 1.3%;
+  text-align: justify;
+}
+.Information > .Description > p > b {
+  color: grey;
+}
+.Information > .Statistics > p {
+  font-size: 2rem;
+  word-spacing: 5px;
+  letter-spacing: 1px;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 3%;
+}
+.Information > .Statistics > .DisplayDiv {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Information > .Statistics > .DisplayDiv > div {
+  text-align: center;
+}
+.Information > .Statistics > .DisplayDiv > div > h2 {
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+.Information > .Statistics > .DisplayDiv > div > p {
+  margin-top: 2%;
+  letter-spacing: 1.2px;
+}
+.Information > .Promotion {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.Information > .Statistics {
+  margin-top: 3%;
+  margin-bottom: 4%;
+}
+.Information > .Promotion {
+  margin-top: 3%;
+  margin-bottom: 1%;
+}
+.Information > .Promotion > p {
+  font-size: larger;
+}
+.Information > .Promotion > form {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Information > .Promotion > form > input {
+  width: 70%;
+  padding: 2% 3%;
+  font-size: small;
+  border: none;
+  outline: none;
+  margin-right: 1%;
+  background-color: rgb(227, 227, 227);
+}
+.Information > .Promotion > form > input:last-child {
+  width: 30%;
+  cursor: pointer;
+  border-radius: 3px;
+  background-color: var(--yellow-color);
+  font-weight: bold;
+  transition: 0.15s;
+  color: rgb(43, 43, 43);
+}
+.Information > .Promotion > form > input:last-child:hover {
+  color: rgb(108, 108, 108);
+}
+@media all and (max-width: 1000px) {
+  .Information {
+    padding: 4% 6%;
+  }
+  .Information > .Description {
+    margin-bottom: 6%;
+  }
+  .Information > .Statistics {
+    margin-top: 5%;
+    margin-bottom: 6%;
+  }
+  .Information > .Statistics > p {
+    font-size: 1.5rem;
+    margin-bottom: 4%;
+  }
+  .Information > .Statistics > .DisplayDiv {
+    width: 80%;
+  }
+  .Information > .Statistics > .DisplayDiv > div > h2 {
+    font-size: 1.3rem;
+  }
+  .Information > .Statistics > .DisplayDiv > div > p {
+    margin-top: 3%;
+    letter-spacing: 1px;
+  }
+  .Information > .Promotion {
+    width: 80%;
+    margin-top: 5%;
+    margin-bottom: 2%;
+  }
+  .Information > .Promotion > p {
+    font-size: large;
+  }
+  .Information > .Promotion > form {
+    width: 50%;
+  }
+  .Information > .Promotion > form > input {
+    padding: 2% 4%;
+  }
+  .Information > .Promotion > form > input:last-child {
+    border-radius: 5px;
+  }
+}
+@media all and (max-width: 800px) {
+  .Information > .Statistics > p {
+    font-size: 1.2rem;
+    margin-bottom: 5%;
+  }
+  .Information > .Statistics > .DisplayDiv {
+    width: 80%;
+  }
+  .Information > .Statistics > .DisplayDiv > div > h2 {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+  }
+  .Information > .Statistics > .DisplayDiv > div > p {
+    margin-top: 4%;
+    letter-spacing: 1px;
+    font-size: small;
+  }
+  .Information > .Promotion {
+    width: 80%;
+    margin-top: 5%;
+    margin-bottom: 2%;
+  }
+  .Information > .Promotion > p {
+    font-size: medium;
+  }
+  .Information > .Promotion > form {
+    width: 50%;
+  }
+  .Information > .Promotion > form > input {
+    padding: 2% 4%;
+    font-size: small;
+    text-overflow: ellipsis;
+  }
+  .Information > .Promotion > form > input:last-child {
+    border-radius: 3px;
+  }
+}
+@media all and (max-width: 650px) {
+  .Information > .Statistics > p {
+    font-size: 1rem;
+    margin-bottom: 5%;
+  }
+  .Information > .Statistics > .DisplayDiv {
+    width: 80%;
+  }
+  .Information > .Statistics > .DisplayDiv > div > h2 {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+  }
+  .Information > .Statistics > .DisplayDiv > div > p {
+    margin-top: 4%;
+    letter-spacing: 0.5px;
+    font-size: x-small;
+  }
+  .Information > .Promotion {
+    width: 80%;
+    margin-top: 5%;
+    margin-bottom: 2%;
+  }
+  .Information > .Promotion > p {
+    font-size: small;
+  }
+  .Information > .Promotion > form {
+    width: 50%;
+  }
+  .Information > .Promotion > form > input {
+    padding: 2% 4%;
+    font-size: x-small;
+    text-overflow: ellipsis;
+  }
+  .Information > .Promotion > form > input:last-child {
+    border-radius: 3px;
+  }
+}

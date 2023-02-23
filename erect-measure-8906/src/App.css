@@ -5,3 +5,11 @@
   box-sizing: border-box;
   font-family: "Noto Sans", sans-serif;
 }
+
+.tagname{
+  margin-top: 20px;
+  color: #212121;
+  font-size: 18px;
+}
+
+
