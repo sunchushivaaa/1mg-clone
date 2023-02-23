@@ -5,6 +5,7 @@ import FullBody from "../../Components/UserSide/FullBody";
 import ShopHealth from "../../Components/UserSide/ShopHealth";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Pathology from "../../Components/UserSide/Pathology";
 export default function Home() {
 
   const Shop_by_health_concerns = [
@@ -84,39 +85,39 @@ export default function Home() {
   };
   const Featured_Brands = [
     {
-      img: "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/70c724a3-78e6-4151-a2cc-968f89464eb1.png",
-      name: "Complan",
+      img: "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/83191a9e-18f2-4eef-9118-b3caa90e4590.png",
+      name: "Veet",
     },
     {
-      img: "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/5751f9c3-115d-45cb-a273-65dcb0affe5b.png",
+      img: "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/9fd34e54-f6a3-4f15-916c-07ca0e6a94a8.png",
+      name: "Colgate",
+    },
+    {
+      img: "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/db5371fa-b446-4e04-b342-5044a9f1ad2f.png",
       name: "Zandu",
     },
     {
-      img: "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/5cdc9366-3c6b-4c36-a459-01e1184452cd.png",
-      name: "Mamaearth",
+      img: "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/21dcb5bd-a5d1-4ce6-932a-f5bb376a23fe.png",
+      name: "Protiex",
     },
     {
-      img: "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/b9655ea4-7223-4203-947a-45e7febbd13a.png",
-      name: "Hansaplast",
+      img: "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/3630d9e4-0e2f-4be7-b1ba-0d0674ddd736.png",
+      name: "mCaffeine",
     },
     {
-      img: "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/c5e9fcc0-1d0a-4317-9b9f-ff902a0e6ff3.png",
-      name: "Baidyanath",
+      img: "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/33efbce4-e766-48cf-a3f3-e710da832c7c.png",
+      name: "Medtech",
     },
     {
-      img: "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/6901e177-b881-496b-91ec-d43ef877d783.png",
-      name: "Optimum Nutrition",
+      img: "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/0ce2c32d-22ae-4a4f-8e1c-e615e13bee66.png",
+      name: "contour",
     },
     {
-      img: "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/e3acb5e4-9421-4ab9-83b4-0445be405693.png",
-      name: "Cetaphil",
-    },
-    {
-      img: "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/11136b2a-8544-480f-ad7d-f2c208d09b36.png",
+      img: "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/8b77c71c-4e7b-48c5-94d6-811748118d10.png",
       name: "Tejasya Ayurveda",
     },
     {
-      img: "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/ead930c9-e893-4777-a303-b6ec5e95c249.png",
+      img: "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/a307b427-631d-436b-bdfc-4a221836588d.png",
       name: "TATA 1mg Health Products",
     },
     
@@ -128,7 +129,7 @@ export default function Home() {
     arrows: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 6,
+    slidesToShow: 8,
     slidesToScroll: 4,
     responsive:[
       {
@@ -328,18 +329,109 @@ export default function Home() {
   };
 
 
+  const Pathol = [
+    {
+    name:"Complete Blood Count",
+    desc:"CBP",
+    detail:"Provided by 4 Labs",
+    price:299,
+    O_price:400,
+    discount:"25% off"
+
+  },
+  {
+    name:"Thyroid profile Total",
+    desc:"Thyroid function Test,TFT",
+    detail:"Provided by 3 Labs",
+    price:320,
+    O_price:600,
+    discount:"46% off"
+
+  },
+  {
+    name:"Lipid profile,Non Fasting",
+    desc:"Provided by 1 Labs",
+    price:320,
+    O_price:500,
+    discount:"35% off",
+    detail:""
+
+  },
+  {
+    name:"Vitamin D (25-OH)",
+    desc:"25-Hydroxy Cholecalciferol",
+    detail:"Provided by 3 Labs",
+    price:370,
+    O_price:1749,
+    discount:"78% off"
+
+  },
+  {
+    name:"Lipid Profile",
+    desc:"Provided by 3 Labs",
+    price:320,
+    O_price:500,
+    discount:"35% off",
+    detail:""
+
+  },
+  {
+    name:"Coronavirus Covid -19 Test",
+    desc:"Sars-Cov-2 Test",
+    detail:"Provided by 1 Labs",
+    price:500,
+    O_price:"Nil",
+    discount:"NA"
+
+  },
+  {
+    name:"H1N1 H3N2 inf B Quality",
+    desc:"Influenza",
+    detail:"Provided by 1 Labs",
+    price:3500,
+    O_price:4500,
+    discount:"22% off"
+
+  },
+  {
+    name:"Diabetes Screening",
+    desc:"Diabetes Panel,Basic(HbA1c)",
+    detail:"Provided by 4 Labs",
+    price:450,
+    O_price:"Nil",
+    discount:"NA"
+
+  },
+  {
+    name:"Liver Function Test",
+    desc:"Hepatic Function Test",
+    detail:"Provided by 3 Labs",
+    price:370,
+    O_price:675,
+    discount:"45% off"
+
+  },
+  {
+    name:"Frequent Pain Check Profile",
+    desc:"Joint Pain",
+    detail:"Provided by 1 Labs",
+    price:150 ,
+    O_price:500,
+    discount:"69% off"
+
+  }
+
+ 
+  ];
+
 
 
 
   
->>>>>>> 542aa1287acd11be136b3b2c155c9206cece1cd5
+
   return (
     <div className="Home" style={{width:"100%",overflow:"hidden",padding:"20px"}}>
       <h1>Home Page</h1>
-<<<<<<< HEAD
-      <h1>Welcome</h1>
-      <button onClick={handleAuth}>logout</button>
-=======
 
       <h3 className="tagname">Shop by health concerns</h3>
      <div style={{background:"white "}}>
@@ -384,11 +476,26 @@ export default function Home() {
        />
      ))}
    </Slider>
+   <h3 className="tagname">Pathology Tests | Up to 70% off</h3>
+      <Slider {...slider3}>
+     
+     {Pathol.map((item) => (
+       < Pathology
+         name={item.name}
+         desc={item.desc}
+         detail={item.detail}
+         price={item.price}
+         O_price={item.O_price}
+         discount={item.discount}
+
+        
+       />
+     ))}
+   </Slider>
 
 
 
 
->>>>>>> 542aa1287acd11be136b3b2c155c9206cece1cd5
     </div>
   );
 }
