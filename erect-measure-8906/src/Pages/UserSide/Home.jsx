@@ -1,3 +1,4 @@
+
 import Slider from "react-slick"
 import FeaturedBrands from "../../Components/UserSide/FeaturedBrands";
 import FullBody from "../../Components/UserSide/FullBody";
@@ -331,9 +332,14 @@ export default function Home() {
 
 
   
+>>>>>>> 542aa1287acd11be136b3b2c155c9206cece1cd5
   return (
     <div className="Home" style={{width:"100%",overflow:"hidden",padding:"20px"}}>
       <h1>Home Page</h1>
+<<<<<<< HEAD
+      <h1>Welcome</h1>
+      <button onClick={handleAuth}>logout</button>
+=======
 
       <h3 className="tagname">Shop by health concerns</h3>
      <div style={{background:"white "}}>
@@ -382,6 +388,7 @@ export default function Home() {
 
 
 
+>>>>>>> 542aa1287acd11be136b3b2c155c9206cece1cd5
     </div>
   );
 }
