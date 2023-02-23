@@ -1,5 +1,5 @@
 import React from "react";
-import "../Styles/FullBody.scss";
+import "../Styles/UserSide/FullBody.scss";
 
 function FullBody({ name, desc, rating, price, O_price, img, discount }) {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import "../Styles/FeaturedBrands.css";
+import "../Styles/UserSide/FeaturedBrands.css";
 
 function FeaturedBrands({ img, name }) {
   return (

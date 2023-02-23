@@ -1,6 +1,6 @@
 import React from "react";
-import DcSlider from "../../Components/UserSide/DcSlider";
-import "../../Components/Styles/Dc.scss";
+import DoctorComponent2 from "./DoctorComponent2";
+import "../Styles/UserSide/DoctorComponent1.scss";
 import Slider from "react-slick";
 const itemName = [
   {
@@ -68,7 +68,7 @@ const itemSlider = {
   ],
 };
 
-function Dc() {
+function DoctorComponent1() {
   return (
     <div id="consultations" className="abu">
       <div className="background">
@@ -230,7 +230,7 @@ function Dc() {
       <div className="dc-slider-setting">
         <Slider {...itemSlider}>
           {itemName.map((item) => (
-            <DcSlider name={item.name} />
+            <DoctorComponent2 name={item.name} />
           ))}
         </Slider>
       </div>
@@ -348,4 +348,4 @@ function Dc() {
   );
 }
 
-export default Dc;
+export default DoctorComponent1;

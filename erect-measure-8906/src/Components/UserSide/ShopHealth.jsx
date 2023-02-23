@@ -1,5 +1,5 @@
 import React from 'react'
-import "../Styles/ShopHealth.css"
+import "../Styles/UserSide/ShopHealth.css"
 
 function ShopHealth({img,name}) {
   return (
