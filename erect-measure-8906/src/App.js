@@ -1,3 +1,4 @@
+
 import { onAuthStateChanged } from "firebase/auth";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
@@ -23,7 +24,7 @@ function App() {
 
   return (
     <div className="App">
-         
+
     </div>
   );
 }
