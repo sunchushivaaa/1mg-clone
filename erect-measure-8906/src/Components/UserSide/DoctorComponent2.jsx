@@ -3,7 +3,7 @@ import React from "react";
 
 
 
-function DcSlider({name}) {
+function DoctorComponent2({name}) {
   return (
 
       <p>
@@ -12,4 +12,4 @@ function DcSlider({name}) {
   );
 }
 
-export default DcSlider;
+export default DoctorComponent2;
