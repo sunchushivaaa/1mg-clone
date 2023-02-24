@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <MainRoutes />
+      {/* <MainRoutes /> */}
       <Footer />
     </div>
   );
