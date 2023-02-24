@@ -205,7 +205,7 @@ function DoctorComponent1() {
           </div>
           <div>
            <Link to="/abcd">
-           <button className="consult_now_button">Consult Now</button>
+           <button className="consult_now_button">Start New Consultation</button>
            </Link>
           </div>
         </div>
