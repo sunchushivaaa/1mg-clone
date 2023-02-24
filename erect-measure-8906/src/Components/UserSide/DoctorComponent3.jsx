@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "../Styles/UserSide/DoctorComponent3.scss";
 const initialState = [
   {
@@ -69,7 +70,7 @@ function DoctorComponent3() {
         <button className="chat_button">Chat</button>
       </div>
       <div id="proceed">
-       <a href="/"> <button  className="proceed">Proceed</button></a>
+       <Link to={"/symptoms"}> <button  className="proceed">Proceed</button> </Link>
       </div>
     </div>
   );
