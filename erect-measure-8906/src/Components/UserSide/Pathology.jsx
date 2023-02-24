@@ -1,9 +1,9 @@
-import React from "react";
-import "../Styles/UserSide/FullBody.scss";
+import React from 'react'
+import "../Styles/UserSide/Path.scss";
 
-function FullBody({ name, desc, rating, price, O_price, img, discount }) {
+function Pathology({name, desc, detail, price, O_price, discount}) {
   return (
-    <div id="xyz" className="xyz">
+    <div className="pathological">
       <div className="mono">
         <h3>{name}</h3>
         <div className="plus">
@@ -23,11 +23,10 @@ function FullBody({ name, desc, rating, price, O_price, img, discount }) {
           <span>Safe</span>
         </div>
       </div>
-      <p style={{fontSize:"12px"}}>{desc}</p>
+      <p style={{fontSize:"12px",color:"grey"}}>{desc}</p>
       <div className="fullbody_brand">
-        <img src={img} alt="" />
-        <p>{rating}</p>
-        <span>ISO</span>
+      
+        <p>{detail}</p>
       </div>
       <div className="abcd">
         <p className="rupee">₹{price}</p>
@@ -35,7 +34,7 @@ function FullBody({ name, desc, rating, price, O_price, img, discount }) {
         <p className="discount">{discount}</p>
       </div>
     </div>
-  );
+  )
 }
 
-export default FullBody;
+export default Pathology

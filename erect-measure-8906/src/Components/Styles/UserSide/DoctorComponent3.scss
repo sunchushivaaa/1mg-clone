@@ -1,0 +1,123 @@
+#doctorform.doctorform{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 80%;
+    max-width: 50%;
+    margin: auto;
+
+    .top_section{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+        // margin-bottom: 30px;
+        margin-top: 30px;
+
+      width: 95%;
+    //   max-width: 50%;
+        // margin: auto;
+        .info_section{
+            width: 60%;
+        }
+        img{
+            height: 100px;
+        }
+        h2{
+            font-size: 20px;
+        font-weight: 600;
+        }
+        p{
+            color: grey;
+            font-size: 14px;
+            word-wrap: break-word;
+        }
+    }
+    .data_section{
+        width: 50%;
+        // max-width: 50%;
+        //   margin: auto;
+          overflow: scroll;
+          height: 200px;
+          width: 95%;
+          .maped{
+    border: 1px solid #ddd2d2;
+    margin: auto;
+    margin: 10px 0px;
+    border-radius: 4px;
+    padding: 5px 10px;
+    width: 350px;
+    h4{
+        font-weight: 400;
+    }
+          }
+
+    }
+    .memberAdd{
+        border: none;
+        background: none;
+        font-size: 18px;
+        font-weight: 600;
+        color: tomato;
+        cursor: pointer;
+        margin-top: 20px;
+      
+    }
+.contact_section{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    label{
+        color: grey;
+        font-size: 14px;
+        margin: 5px;
+    }
+    input{
+        padding: 10px 10px;
+        border-radius: 4px;
+        // width: 50%;
+        // max-width: 50%;
+        width: 380px;
+        
+    }
+}
+.chat_button{
+    border: 1px solid #a9a9a9;
+    border-radius: 4px;
+    background: transparent;
+    padding: 2px 18px;
+    margin: 10px 15px;
+    
+
+}
+.Chat_section{
+    margin-top: 30px;
+    p{
+        color: grey;
+        font-size: 14px;
+    }
+}
+#proceed{
+    color: white;
+    align-self: flex-end;
+    width: 35%;
+}
+.proceed{
+    // padding: 5px 40px;
+    width: 200px;
+    // width: 100%;
+    background-color: #ff6f61;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0 12px;
+}
+
+
+}
