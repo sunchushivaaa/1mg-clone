@@ -1,5 +1,5 @@
 import React from 'react'
-
+import "../Styles/UserSide/Path.scss";
 
 function Pathology({name, desc, detail, price, O_price, discount}) {
   return (

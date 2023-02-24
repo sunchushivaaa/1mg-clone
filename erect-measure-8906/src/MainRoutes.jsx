@@ -8,6 +8,7 @@ import Medicines from "./Pages/UserSide/Medicines";
 import Cart from "./Pages/UserSide/Cart";
 import ProductDetail from "./Pages/UserSide/ProductDetail";
 import ConsultDoctor from "./Pages/UserSide/ConsultDoctor";
+import DoctorComponent3 from "./Components/UserSide/DoctorComponent3";
 
 export default function MainRoutes() {
   return (
@@ -19,6 +20,7 @@ export default function MainRoutes() {
       <Route path="/medicines" element={<Medicines />} />
       <Route path="/cart" element={<Cart />} />
       <Route path="/consultdoctor" element={<ConsultDoctor />} />
+      <Route path="/abcd/" element={<DoctorComponent3/>}/>
       <Route path="/:type/:id" element={<ProductDetail />} />
       <Route path="*" element={<Error />} />
     </Routes>

@@ -2,6 +2,7 @@ import React from "react";
 import DoctorComponent2 from "./DoctorComponent2";
 import "../Styles/UserSide/DoctorComponent1.scss";
 import Slider from "react-slick";
+import {Link} from "react-router-dom"
 const itemName = [
   {
     name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit iure incidunt voluptas sequi mollitia accusamus vitae, voluptatem amet veritatis minima.",
@@ -203,7 +204,9 @@ function DoctorComponent1() {
             </div>
           </div>
           <div>
-            <button className="consult_now_button">Consult Now</button>
+           <Link to="/abcd">
+           <button className="consult_now_button">Consult Now</button>
+           </Link>
           </div>
         </div>
         <div>

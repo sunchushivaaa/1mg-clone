@@ -3,7 +3,7 @@ import "../Styles/UserSide/FullBody.scss";
 
 function FullBody({ name, desc, rating, price, O_price, img, discount }) {
   return (
-    <div className="xyz">
+    <div id="xyz" className="xyz">
       <div className="mono">
         <h3>{name}</h3>
         <div className="plus">
