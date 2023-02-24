@@ -23,7 +23,7 @@ const SlideShow = () => {
 
   return (
     <div className="slideshow">
-      <img src={images[imageIndex]} alt="nah" />;
+      <img src={images[imageIndex]} alt="img" />;
     </div>
   );
 };

@@ -1,7 +1,10 @@
-export default function Login() {
-    return (
-      <div className="Login">
-        <h1>Login Page</h1>
-      </div>
-    );
-  }
+import LoginComponent from "../../Components/UserSide/LoginComponent";
+
+const Login = () => {
+  return (
+    <div>
+      <LoginComponent />
+    </div>
+  );
+};
+export default Login;
