@@ -1,4 +1,3 @@
-
 .Shop_by_health_concerns_main {
   display: flex;
   flex-direction: column;
@@ -10,6 +9,6 @@
 }
 .Shop_by_health_concerns_main:hover {
   border-radius: 6px;
-    box-sizing: border-box;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 12px 0px;
+  box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 12px 0px;
 }

@@ -573,7 +573,6 @@ export default function Home() {
       style={{ width: "100%", overflow: "hidden", padding: "20px" }}
     >
       <h1>Home Page</h1>
-
       <h3 className="tagname">Shop by health concerns</h3>
       <div style={{ background: "white " }}>
         <Slider {...slider1}>

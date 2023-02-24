@@ -172,6 +172,7 @@
   transition: 0.25s;
   background-color: rgb(250, 250, 250);
   border-radius: 5px;
+  z-index: 100000;
 }
 .MenuDiv1 > p {
   margin-top: 3%;
@@ -296,7 +297,7 @@
   }
   .Navbar > .Middle > .Input > select,
   .Navbar > .Middle > .Input > form > input {
-    font-size: 0.7rem;
+    font-size: 0rem;
   }
   .Navbar > .Top > .Services > h3 > span {
     font-size: xx-small;
