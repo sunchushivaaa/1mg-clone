@@ -316,8 +316,8 @@ export default function Home() {
       <h3 className="tagname">Shop by health concerns</h3>
       <div style={{ background: "white " }}>
         <Slider {...slider1}>
-          {Shop_by_health_concerns.map((item) => (
-            <ShopHealth name={item.name} img={item.img} />
+          {Shop_by_health_concerns.map((item,index) => (
+            <ShopHealth name={item.name} img={item.img} key={index} />
           ))}
         </Slider>
       </div>
@@ -330,7 +330,7 @@ export default function Home() {
 
       <h3 className="tagname">Full body health checkups</h3>
       <Slider {...slider3}>
-        {Full_body_health_checkups.map((item) => (
+        {Full_body_health_checkups.map((item,index) => (
           <FullBody
             name={item.name}
             img={item.img}
@@ -339,6 +339,7 @@ export default function Home() {
             O_price={item.O_price}
             discount={item.discount}
             rating={item.rating}
+            key={index}
           />
         ))}
       </Slider>
