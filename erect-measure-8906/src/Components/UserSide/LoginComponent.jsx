@@ -1,13 +1,13 @@
 import styles from "../Styles/UserSide/Login.module.css";
 import React,{useEffect, useState} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link, useNavigate} from 'react-router-dom';
+import { Link, useLocation, useNavigate} from 'react-router-dom';
 import { loginUser } from '../../Redux/UserSide/Auth Redux/action';
 import { useLocation } from "react-router-dom";
 // import { logoutUser } from "../../Redux/UserSide/Auth Redux/action";
 
 const LoginComponent = () => {
-  const location=useLocation();
+  const location=useLocation()
     const[email,setEmail]=useState("");
     const[password,setPassword]=useState("");
     // const{currentUser}=useSelector((store)=> store.AuthReducer)
@@ -40,7 +40,7 @@ const LoginComponent = () => {
 
  useEffect(()=>{
      if(currentUser){
-        navigate("/");
+        navigate(location.state);
      }
  },[currentUser,navigate])
     
