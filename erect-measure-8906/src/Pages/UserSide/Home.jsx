@@ -4,6 +4,8 @@ import FullBody from "../../Components/UserSide/FullBody";
 import ShopHealth from "../../Components/UserSide/ShopHealth";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Pathology from "../../Components/UserSide/Pathology";
+import Homeopathic from "../../Components/UserSide/Homeopathic";
 export default function Home() {
   const Shop_by_health_concerns = [
     {
@@ -79,39 +81,39 @@ export default function Home() {
   };
   const Featured_Brands = [
     {
-      img: "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/70c724a3-78e6-4151-a2cc-968f89464eb1.png",
-      name: "Complan",
+      img: "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/83191a9e-18f2-4eef-9118-b3caa90e4590.png",
+      name: "Veet",
     },
     {
-      img: "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/5751f9c3-115d-45cb-a273-65dcb0affe5b.png",
+      img: "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/9fd34e54-f6a3-4f15-916c-07ca0e6a94a8.png",
+      name: "Colgate",
+    },
+    {
+      img: "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/db5371fa-b446-4e04-b342-5044a9f1ad2f.png",
       name: "Zandu",
     },
     {
-      img: "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/5cdc9366-3c6b-4c36-a459-01e1184452cd.png",
-      name: "Mamaearth",
+      img: "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/21dcb5bd-a5d1-4ce6-932a-f5bb376a23fe.png",
+      name: "Protiex",
     },
     {
-      img: "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/b9655ea4-7223-4203-947a-45e7febbd13a.png",
-      name: "Hansaplast",
+      img: "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/3630d9e4-0e2f-4be7-b1ba-0d0674ddd736.png",
+      name: "mCaffeine",
     },
     {
-      img: "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/c5e9fcc0-1d0a-4317-9b9f-ff902a0e6ff3.png",
-      name: "Baidyanath",
+      img: "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/33efbce4-e766-48cf-a3f3-e710da832c7c.png",
+      name: "Medtech",
     },
     {
-      img: "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/6901e177-b881-496b-91ec-d43ef877d783.png",
-      name: "Optimum Nutrition",
+      img: "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/0ce2c32d-22ae-4a4f-8e1c-e615e13bee66.png",
+      name: "contour",
     },
     {
-      img: "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/e3acb5e4-9421-4ab9-83b4-0445be405693.png",
-      name: "Cetaphil",
-    },
-    {
-      img: "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/11136b2a-8544-480f-ad7d-f2c208d09b36.png",
+      img: "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/8b77c71c-4e7b-48c5-94d6-811748118d10.png",
       name: "Tejasya Ayurveda",
     },
     {
-      img: "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/ead930c9-e893-4777-a303-b6ec5e95c249.png",
+      img: "https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/a307b427-631d-436b-bdfc-4a221836588d.png",
       name: "TATA 1mg Health Products",
     },
   ];
@@ -121,7 +123,7 @@ export default function Home() {
     arrows: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 6,
+    slidesToShow: 8,
     slidesToScroll: 4,
     responsive: [
       {
@@ -307,6 +309,264 @@ export default function Home() {
     ],
   };
 
+  const Pathol = [
+    {
+      name: "Complete Blood Count",
+      desc: "CBP",
+      detail: "Provided by 4 Labs",
+      price: 299,
+      O_price: 400,
+      discount: "25% off",
+    },
+    {
+      name: "Thyroid profile Total",
+      desc: "Thyroid function Test,TFT",
+      detail: "Provided by 3 Labs",
+      price: 320,
+      O_price: 600,
+      discount: "46% off",
+    },
+    {
+      name: "Lipid profile,Non Fasting",
+      desc: "Provided by 1 Labs",
+      price: 320,
+      O_price: 500,
+      discount: "35% off",
+      detail: "",
+    },
+    {
+      name: "Vitamin D (25-OH)",
+      desc: "25-Hydroxy Cholecalciferol",
+      detail: "Provided by 3 Labs",
+      price: 370,
+      O_price: 1749,
+      discount: "78% off",
+    },
+    {
+      name: "Lipid Profile",
+      desc: "Provided by 3 Labs",
+      price: 320,
+      O_price: 500,
+      discount: "35% off",
+      detail: "",
+    },
+    {
+      name: "Coronavirus Covid -19 Test",
+      desc: "Sars-Cov-2 Test",
+      detail: "Provided by 1 Labs",
+      price: 500,
+      O_price: "Nil",
+      discount: "NA",
+    },
+    {
+      name: "H1N1 H3N2 inf B Quality",
+      desc: "Influenza",
+      detail: "Provided by 1 Labs",
+      price: 3500,
+      O_price: 4500,
+      discount: "22% off",
+    },
+    {
+      name: "Diabetes Screening",
+      desc: "Diabetes Panel,Basic(HbA1c)",
+      detail: "Provided by 4 Labs",
+      price: 450,
+      O_price: "Nil",
+      discount: "NA",
+    },
+    {
+      name: "Liver Function Test",
+      desc: "Hepatic Function Test",
+      detail: "Provided by 3 Labs",
+      price: 370,
+      O_price: 675,
+      discount: "45% off",
+    },
+    {
+      name: "Frequent Pain Check Profile",
+      desc: "Joint Pain",
+      detail: "Provided by 1 Labs",
+      price: 150,
+      O_price: 500,
+      discount: "69% off",
+    },
+  ];
+
+  const homeo = [
+    {
+      img: "https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/h42pkvhvgszup5qsl5j8.jpg",
+      name: "SBL Justicia Adhatoda Mother Tincture Q",
+      desc: " Bottle of 30 ml Mother Tincture",
+      detail: "Delivery by",
+      price: 75,
+      O_price: 105,
+      discount: "% off",
+    },
+    {
+      img: "https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/jqut5zvsa2tla3zspjyb.jpg",
+      name: "SBL Stobal Cough Syrup",
+      desc: "1 Bottle of 180 ml Syrup",
+      detail: "Delivery by",
+      price: 124,
+      O_price: 165,
+      discount: "25% off",
+    },
+    {
+      img: "https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/jrj44xs0x6zct4hur8y2.jpg",
+      name: "Dr. Reckeweg R9 Cough Drop",
+      desc: "1 Bottle of 22 ml Drop",
+      detail: "Delivery by",
+      price:243 ,
+      O_price:270 ,
+      discount: "10% off",
+    },
+    {
+      img: "https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/krgx88eqixqegmk8h9zy.jpg",
+      name: "Dr Willmar Schwabe India Alpha-Coff Cough Syrup",
+      desc: "1 Bottle of 100 ml Syrup",
+      detail: "Delivery by",
+      price:99 ,
+      O_price:115 ,
+      discount: "14% off",
+    },
+    {
+      img: "https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/dkxxobch5ytazpho9ktr.jpg",
+      name: "Dr. Reckeweg Bio-Combination 6 (BC 6) Tablet",
+      desc: "1 Bottle of 20 gm Biocombination Tablet",
+      detail: "Delivery by",
+      price:171 ,
+      O_price:185 ,
+      discount: "7% off",
+    },
+    {
+      img: "https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/cropped/jqok5v4o4cktyl96zgwy.jpg",
+      name: "Dr. Reckeweg R8 Jut-U-Sin Cough Syrup",
+      desc: "1 Bottle of 150 ml Syrup",
+      detail: "Delivery by",
+      price:403 ,
+      O_price: 490,
+      discount: "17% off",
+    },
+    {
+      img: "https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/cropped/zvo5jraqmpp5okczrqas.png",
+      name: "SBL Stobal Cough Syrup",
+      desc: "1 Bottle of 115 ml Syrup",
+      detail: "Delivery by",
+      price: 78,
+      O_price: 110,
+      discount: "29% off",
+    },
+    {
+      img: "https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/mwas834rwbrukt1akcdn.jpg",
+      name: "SBL AF-Tabs Tablet",
+      desc: "1 Bottle of 25 gm Tablet",
+      detail: "Delivery by",
+      price: 114,
+      O_price: 155,
+      discount: "26% off",
+    },
+    {
+      img: "https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/yqawfpoknnz8wwmifzlz.jpg",
+      name: "Medisynth Kofeez Cough Syrup",
+      desc: "2 Bottles (minimum) of 120 ml Syrup",
+      detail: "Delivery by",
+      price:114 ,
+      O_price: 120,
+      discount: "5% off",
+    },
+    {
+      img: "https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/cropped/olvcy3bqjgddi4bpmbkx.jpg",
+      name: "Dr Willmar Schwabe India Tussikind Tablet",
+      desc: "1 Bottle of 10 gm Tablet",
+      detail: "Delivery by",
+      price: 116,
+      O_price: 120,
+      discount: "3% off",
+    },
+    {
+      img: "https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/f8vgpzszk59fq6comiem.jpg",
+      name: "Bakson's Aller Aid Tablet",
+      desc: "1 Bottle of 75 tablets",
+      detail: "Delivery by",
+      price:178 ,
+      O_price:215 ,
+      discount: "1% off",
+    },
+    {
+      img: "https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/l303ax3rdxccw583puxa.jpg",
+      name: "SBL Bio-Combination 6 Tablet",
+      desc: "1 Bottle of 25 gm Biocombination Tablet",
+      detail: "Delivery by",
+      price:75 ,
+      O_price:105 ,
+      discount: "28% off",
+    },
+    {
+      img: "https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/cropped/pgd9uf76vrp10iidffhn.jpg",
+      name: "SBL Hepar Sulphur Dilution 200 CH",
+      desc: "1 Bottle of 30 ml Dilution",
+      detail: "Delivery by",
+      price:90 ,
+      O_price: 105,
+      discount: "14% off",
+    },
+    {
+      img: "https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/dulhg3jfhqjsdlkyzovi.jpg",
+      name: "Bakson's Kof Aid Tablet",
+      desc: "1 Bottle of 75 tablets",
+      detail: "Delivery by",
+      price: 186,
+      O_price:215 ,
+      discount: "13% off",
+    },
+    {
+      img: "https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/cropped/h7gskffzvh01rpcu48kf.jpg",
+      name: "Dr. Reckeweg Chelidonium Maj Mother Tincture Q",
+      desc: "1 Bottle of 20 ml Mother Tincture",
+      detail: "Delivery by",
+      price: 230,
+      O_price: 255,
+      discount: "10% off",
+    },
+    
+  ];
+  
+  const slider7 = {
+   
+    dots: true,
+    arrows: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 7,
+    slidesToScroll: 4,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
   return (
     <div
       className="Home"
@@ -340,6 +600,33 @@ export default function Home() {
             discount={item.discount}
             rating={item.rating}
             key={index}
+          />
+        ))}
+      </Slider>
+      <h3 className="tagname">Pathology Tests | Up to 70% off</h3>
+      <Slider {...slider3}>
+        {Pathol.map((item) => (
+          <Pathology
+            name={item.name}
+            desc={item.desc}
+            detail={item.detail}
+            price={item.price}
+            O_price={item.O_price}
+            discount={item.discount}
+          />
+        ))}
+      </Slider>
+      <h3 className="tagname">Homeopathic care for cold & cough</h3>
+      <Slider {...slider7}>
+        {homeo.map((item) => (
+          <Homeopathic
+            img={item.img}
+            name={item.name}
+            desc={item.desc}
+            detail={item.detail}
+            price={item.price}
+            O_price={item.O_price}
+            discount={item.discount}
           />
         ))}
       </Slider>

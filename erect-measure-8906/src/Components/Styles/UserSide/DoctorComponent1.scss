@@ -1,4 +1,7 @@
 #consultations.abu {
+
+
+
   .consultations {
     display: flex;
     padding: 20px;
@@ -6,6 +9,7 @@
     margin: auto;
     min-width: 70%;
   }
+  
   .careplan_button button {
     background: #903e38;
     color: white;
@@ -55,12 +59,13 @@
     color: grey;
   }
   .consult_now_button {
-    padding: 8px 70px;
+    padding: 9px 70px;
     border: none;
     border-radius: 4px;
     background-color: #ff6f61;
     color: white;
     font-weight: 600;
+    font-size: 18px;
   }
   .part3 {
     border: 1px solid;
