@@ -17,8 +17,8 @@
   margin: auto;
   margin-top: 2rem;
 }
-.loginDiv1 > input,
-.loginDiv2 > input {
+.loginDiv1  input,
+.loginDiv2  input {
   width: 100%;
   padding: 15px 5px;
   border-radius: 10px;

@@ -4,7 +4,7 @@ import { useSearchParams } from 'react-router-dom';
 import Pagination from './Pagination';
 import ProductList from './ProductList';
 import Sidebar from './Sidebar';
-import "../Styles/UserSide/Filter.css"
+import "../Styles/UserSide/Filter.scss"
 const FilterPage = () => {
   const[searchParams]=useSearchParams();
   const initialOrder=searchParams.get("order");
@@ -25,7 +25,7 @@ const {page,limit}=pageFilter;
 
     let src="https://onemg.gumlet.io/3ec13691-bb3b-49f5-a91f-b529d849ad70_1667573307.jpg?w=1062&h=124&format=auto";
   return (
-    <div>
+    <div id="filter_scss" className='filter_scss'>
           <div className="filter_main">
              <Sidebar order={order} />
              <div style={{width:"90%",marginTop:"2rem"}}>

@@ -3,7 +3,6 @@ import React,{useEffect, useState} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useLocation, useNavigate} from 'react-router-dom';
 import { loginUser } from '../../Redux/UserSide/Auth Redux/action';
-
 // import { logoutUser } from "../../Redux/UserSide/Auth Redux/action";
 
 const LoginComponent = () => {
@@ -21,7 +20,9 @@ const LoginComponent = () => {
       if(!email || !password){
          return
       }
-      dispatch(loginUser(email,password))
+      dispatch(loginUser(email,password)).then(()=>{
+        navigate(location.state,{replace:true})
+      })
       setEmail("");
       setPassword("");
       
