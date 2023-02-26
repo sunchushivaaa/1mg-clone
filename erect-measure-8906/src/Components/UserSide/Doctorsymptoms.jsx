@@ -26,7 +26,9 @@ function Doctorsymptoms() {
       </div>
       <div className="most_searched">
         <p>Most Searched</p>
-        <button className="chat_button">Covid</button>
+       
+       <div>
+       <button className="chat_button">Covid</button>
         <button className="chat_button">Cough</button>
         <button className="chat_button">Headache</button>
         <button className="chat_button">Stomach Pain</button>
@@ -38,6 +40,7 @@ function Doctorsymptoms() {
         <button className="chat_button">Hairfall</button>
         <button className="chat_button">Acne/Pimples</button>
         <button className="chat_button">Dark Patches on Skin</button>
+       </div>
       </div>
       <div id="proceed">
     <Link to={"/abcd"} >   <button  className="back">Back</button></Link>

@@ -1,0 +1,317 @@
+#payment.payment {
+  background-color: #f8f8f8;
+  margin-top: 20px;
+  .payment_main {
+    display: grid;
+    grid-template-columns: auto 400px 300px;
+    gap: 20px;
+    width: 80%;
+    margin: auto;
+    justify-content: center;
+    .card {
+      background-color: #fff3e3;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      // align-items: center;
+      // text-align: center;
+      padding: 15px 30px;
+      div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        img {
+          width: 40px;
+          height: 40px;
+          object-fit: contain;
+        }
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+    .upi {
+      border-bottom: 1px solid;
+      font-size: 14px;
+      background: white;
+      padding: 15px;
+
+      p {
+        margin-bottom: 20px;
+        font-weight: 700;
+      }
+      .iconic_div {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        border-bottom: 1px solid grey;
+        padding-bottom: 30px;
+        margin-bottom: 20px;
+
+        .iconic_pic {
+          display: flex;
+          gap: 20px;
+
+          img {
+            height: 30px;
+            width: 30px;
+          }
+        }
+      }
+      .input_div {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .exupi {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          // margin-top: 30px;
+          // margin-bottom: 20px;
+          input {
+            border: none;
+            border-bottom: 1px solid;
+            outline: none;
+            width: 50%;
+          }
+          label {
+            font-size: 12px;
+          }
+        }
+        button {
+          width: max-content;
+          padding: 10px 20px;
+          border: none;
+          background-color: tomato;
+          border-radius: 4px;
+          color: white;
+          cursor: pointer;
+        }
+      }
+    }
+    .payment_wallet ,.payment_paylater{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        padding: 15px;
+      > div {
+        padding: 4%;
+        width: 80%;
+        box-shadow: 1px 1px 10px rgb(0 0 0 / 20%);
+
+        div {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+      }
+    }
+    .netbanking{
+        display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: max-content max-content max-content;
+    padding: 15px;
+  
+    gap: 20px;
+div{
+    flex-grow: 1;
+    padding: 10px;
+    box-shadow: 1px 1px 10px rgb(0 0 0 / 20%);
+    width: max-content;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    height: 70px;
+}
+
+    }
+    .finalpay {
+      p {
+        font-size: 12px;
+      }
+      .one {
+        border-radius: 2px;
+        box-shadow: 0 2px 2px 0 rgb(0 0 0 / 8%);
+        background-color: #fff;
+        color: #212121;
+        padding: 15px;
+        padding-bottom: 0;
+        .payoffer {
+          border-top: 1px solid #e0dada;
+          margin-top: 10px;
+          display: flex;
+          align-items: center;
+          h4 {
+            font-weight: 600;
+            font-size: 12px;
+            color: #2e2e2e;
+            text-align: right;
+
+            width: calc(100% + 30px);
+            margin-left: -15px;
+            padding-right: 10px;
+          }
+          span {
+            transform: translateY(-6px);
+            color: tomato;
+            font-size: 50px;
+          }
+        }
+
+        .paywith {
+          gap: 5px;
+          display: flex;
+          align-items: flex-start;
+          img {
+            height: 16px;
+            width: 16px;
+          }
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+      .two {
+        padding: 15px;
+        background-color: rgb(246, 237, 220);
+        .stick {
+          display: flex;
+          /* background: red; */
+          align-items: baseline;
+          margin-bottom: 10px;
+          border-bottom: 1px solid #ddd9d9;
+          gap: 10px;
+          padding-bottom: 10px;
+        }
+        .care_plan {
+          display: flex;
+          gap: 5px;
+          justify-content: space-between;
+          align-items: center;
+          .know_more {
+            color: tomato;
+          }
+          button {
+            background: #903e38;
+            color: white;
+            border: none;
+            /* margin: 10px; */
+            padding: 4px 0px;
+            border-radius: 6px;
+            clip-path: polygon(100% 0, 87% 100%, 0% 100%, 0% 0%);
+            width: 85px;
+            /* padding-left: 2px; */
+            border-bottom-right-radius: 55px;
+            border-top-right-radius: 20px;
+            padding-right: 5px;
+          }
+        }
+      }
+      .new_coin {
+        border-radius: 2px;
+        box-shadow: 0 2px 2px 0 rgb(0 0 0 / 8%);
+        background-color: #fff;
+        color: #212121;
+        padding: 15px;
+        margin: 15px 0;
+        div {
+          display: flex;
+          align-items: center;
+        }
+        .new_input {
+          button {
+            padding: 5px 15px;
+            background: tomato;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-weight: 600;
+          }
+          input {
+            border: 1px solid tomato;
+            border-radius: 4px;
+            padding: 4px;
+            flex-grow: 1;
+          }
+        }
+        .new_balance {
+          justify-content: space-between;
+          padding: 7px 0;
+          div {
+            img {
+              height: 30px;
+              margin-left: -4px;
+            }
+          }
+        }
+        .new_redeem {
+          gap: 9px;
+          padding-left: 5px;
+        }
+      }
+
+      .new_total_price {
+        border-radius: 2px;
+        box-shadow: 0 2px 2px 0 rgb(0 0 0 / 8%);
+        background-color: #fff;
+        color: #212121;
+        padding: 15px;
+        margin: 15px 0;
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+        div {
+          grid-column-start: 1;
+          grid-column-end: 3;
+          display: grid;
+          background: wheat;
+          margin-left: -15px;
+          margin-bottom: -15px;
+          margin-top: 15px;
+          padding: 8px 15px;
+          width: calc(100% + 30px);
+
+          p {
+            font-size: 18px;
+          }
+        }
+      }
+      .Enter_detail_btn {
+        width: 100%;
+        padding: 10px;
+        font-weight: bold;
+        color: white;
+        background: tomato;
+        border: 1px solid transparent;
+        border-radius: 4px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) and (min-width: 600px) {
+  #payment.payment {
+    .payment_main {
+      grid-template-columns: 1fr 300px;
+      width: 98%;
+      .card {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  #payment.payment {
+    .payment_main {
+      grid-template-columns: 350px;
+    }
+  }
+}

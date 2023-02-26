@@ -22,9 +22,13 @@ const SlideShow = () => {
   setInterval(nextImage, 3000);
 
   return (
-    <div className="slideshow">
+    <div style={{display:"flex"}}>
+       <div className="slideshow">
       <img src={images[imageIndex]} alt="img" />;
     </div>
+      <div><img src="https://onemg.gumlet.io/a_ignore,w_1269,h_250,c_fit,q_auto,f_auto/49a3b635-a507-45a4-a54b-0b791e19e536.png" alt="" /></div>
+    </div>
+   
   );
 };
 

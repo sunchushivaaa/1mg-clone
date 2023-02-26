@@ -11,6 +11,7 @@ import ConsultDoctor from "./Pages/UserSide/ConsultDoctor";
 import DoctorComponent3 from "./Components/UserSide/DoctorComponent3";
 import Doctorsymptoms from "./Components/UserSide/Doctorsymptoms";
 import DoctorFinal from "./Components/UserSide/DoctorFinal";
+import Payment from "./Components/UserSide/Payment";
 
 export default function MainRoutes() {
   return (
@@ -25,7 +26,8 @@ export default function MainRoutes() {
       <Route path="/abcd/" element={<DoctorComponent3/>}/>
       <Route path="/symptoms" element={<Doctorsymptoms/>}/>
       <Route path="/doctor_final" element={<DoctorFinal/>}/>
-      <Route path="/:type/:id" element={<ProductDetail />} />
+      <Route path="/doctor_final" element={<DoctorFinal/>}/>
+      <Route path="/payment" element={<Payment/>} />
       <Route path="*" element={<Error />} />
     </Routes>
   );
