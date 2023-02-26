@@ -7,6 +7,10 @@ import { loginUser } from '../../Redux/UserSide/Auth Redux/action';
 // import { logoutUser } from "../../Redux/UserSide/Auth Redux/action";
 
 const LoginComponent = () => {
+<<<<<<< Updated upstream
+=======
+  const location=useLocation();
+>>>>>>> Stashed changes
     const[email,setEmail]=useState("");
     const[password,setPassword]=useState("");
     // const{currentUser}=useSelector((store)=> store.AuthReducer)
@@ -20,7 +24,9 @@ const LoginComponent = () => {
       if(!email || !password){
          return
       }
-      dispatch(loginUser(email,password))
+      dispatch(loginUser(email,password)).then(()=>{
+        navigate(location.state,{replace:true})
+      })
       setEmail("");
       setPassword("");
       

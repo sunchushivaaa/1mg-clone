@@ -9,10 +9,10 @@ import FilterPage from "./Components/UserSide/FilterPage";
 function App() {
   return (
     <div className="App">
-      {/* <Navbar />
+      <Navbar />
       <MainRoutes />
-      <Footer /> */}
       <FilterPage/>
+      <Footer />
     </div>
   );
 }

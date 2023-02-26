@@ -47,7 +47,7 @@ const Register = () => {
   },[currentUser,navigate])
   return (
    
-    <div className={Styles.regDiv}>
+    <div className={Styles.regDiv} id="register_page">
          <form onSubmit={handleSubmit}>
         
             <h1 className={Styles.head}>Sign Up</h1>
