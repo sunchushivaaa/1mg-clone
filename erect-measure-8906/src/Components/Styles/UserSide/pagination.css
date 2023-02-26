@@ -1,0 +1,79 @@
+.pag_div{
+    display:block;
+    margin:auto;
+    width:80%;
+    text-align:center;
+    margin-top:40px;
+    margin-bottom:40px;
+}
+
+.activeStyle{
+    background-color:blue;
+    color:white;
+    margin-left:30px;
+    font-size:40px;
+    padding:6px 20px;
+    border:0;
+    border-radius:10px;
+ }
+
+ .defaultStyle{
+    background-color:red;
+    color:white;
+    margin-left:30px;
+    font-size:40px;
+    padding:6px 20px;
+    border:0;
+    border-radius:10px;
+}
+
+.pag_btn1{
+    cursor:pointer;
+    font-size: 20px;
+    padding: 6px 6px;
+    border: 1px solid black;
+    border-radius: 10px;
+    color: black;
+}
+
+
+.pag_btn2{
+    cursor: pointer;
+    font-size: 20px;
+    padding: 6px 6px;
+    margin-left: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    .pag_div{
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+        margin: 0;
+        margin-top: 20px;
+        margin-bottom: 20px;
+     }
+     .activeStyle,.defaultStyle{
+        font-size: 30px;
+        margin-left: 10px;
+     }
+ }
+
+@media all and (min-width: 320px) and (max-width: 767px){
+    .pag_div{
+       display: flex;
+       flex-direction: row;
+       width: 30%;
+       margin: 0;
+       margin-top: 10px;
+    }
+    .activeStyle,.defaultStyle{
+        font-size: 20px;
+        padding: 6px;
+        margin-left: 10px;
+    }
+    .pag_btn1,.pag_btn2{
+        margin-left: 10px;
+    }
+}
