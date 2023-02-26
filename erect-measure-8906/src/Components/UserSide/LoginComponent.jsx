@@ -3,7 +3,6 @@ import React,{useEffect, useState} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useLocation, useNavigate} from 'react-router-dom';
 import { loginUser } from '../../Redux/UserSide/Auth Redux/action';
-import { useLocation } from "react-router-dom";
 // import { logoutUser } from "../../Redux/UserSide/Auth Redux/action";
 
 const LoginComponent = () => {
