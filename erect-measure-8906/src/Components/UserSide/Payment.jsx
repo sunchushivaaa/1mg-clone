@@ -124,10 +124,33 @@ function Payment() {
             <div>
               <div>
                 <img
-                  src="https://onemg.gumlet.io/marketing/b3328bf5-3494-42bc-be46-f84da4e5b724.jpg"
+                  src="https://onemg.gumlet.io/marketing/1cf762b1-31f0-4d22-b629-693617c65c2e.jpg"
                   alt=""
                 />
-                <p>Lorem, ipsum.</p>
+                
+                <p>Paytm Wallet</p>
+              </div>
+              <p className="txt">Pay with Paytm Wallet on Tata 1mg for ₹799 or more and get up to ₹400 cashback. Offer ends 28th February 2023.</p>
+              <h4>LINK WALLET</h4>
+            </div>
+            <div>
+              <div>
+                <img
+                  src="https://onemg.gumlet.io/marketing/bc46c843-3a35-479b-9589-d788b7e0e04f.png"
+                  alt=""
+                />
+                <p>Mobikwik | ZIP (Pay Later)</p>
+              </div>
+              <p className="txt">Pay with Mobikwik and get up to ₹500 cashback on allopathy medicines with assured cashback of ₹50. Minimum cart value for the offer is ₹999. Offer valid till 28th Feb'23.</p>
+              <h4>LINK WALLET</h4>
+            </div>
+            <div>
+              <div>
+                <img
+                  src="https://onemg.gumlet.io/marketing/4935145f-41b2-419c-a085-9b3524bb1ce0.jpg"
+                  alt=""
+                />
+                <p>Freecharge PayLater | Wallet</p>
               </div>
               <h4>LINK WALLET</h4>
             </div>
@@ -137,37 +160,17 @@ function Payment() {
                   src="https://onemg.gumlet.io/marketing/b3328bf5-3494-42bc-be46-f84da4e5b724.jpg"
                   alt=""
                 />
-                <p>Lorem, ipsum.</p>
+                <p>PhonePe</p>
               </div>
               <h4>LINK WALLET</h4>
             </div>
             <div>
               <div>
                 <img
-                  src="https://onemg.gumlet.io/marketing/b3328bf5-3494-42bc-be46-f84da4e5b724.jpg"
+                  src="https://onemg.gumlet.io/marketing/c3a2745b-418c-401d-b299-41e4ba354c94.png"
                   alt=""
                 />
-                <p>Lorem, ipsum.</p>
-              </div>
-              <h4>LINK WALLET</h4>
-            </div>
-            <div>
-              <div>
-                <img
-                  src="https://onemg.gumlet.io/marketing/b3328bf5-3494-42bc-be46-f84da4e5b724.jpg"
-                  alt=""
-                />
-                <p>Lorem, ipsum.</p>
-              </div>
-              <h4>LINK WALLET</h4>
-            </div>
-            <div>
-              <div>
-                <img
-                  src="https://onemg.gumlet.io/marketing/b3328bf5-3494-42bc-be46-f84da4e5b724.jpg"
-                  alt=""
-                />
-                <p>Lorem, ipsum.</p>
+                <p>Amazon Pay</p>
               </div>
               <h4>LINK WALLET</h4>
             </div>
@@ -181,55 +184,56 @@ function Payment() {
             <div>
               <div>
                 <img
-                  src="https://onemg.gumlet.io/marketing/b3328bf5-3494-42bc-be46-f84da4e5b724.jpg"
+                style={{height:"45px"}}
+                  src="https://onemg.gumlet.io/marketing/6b275cba-1da3-4647-9927-e86db52abb5b.png"
                   alt=""
                 />
-                <p>Lorem, ipsum.</p>
+                <p>Simpl</p>
               </div>
-              <p>
+              <p  style={{fontSize:"12px",color:"green",margin:"15px 0"}}>
                 Pay with Simpl and get 5% cashback up to ₹500 on your first
                 transaction with no minimum cart value. Valid till 28th February
                 2023.
               </p>
-              <h4>LINK WALLET</h4>
+              <h5 style={{color:"tomato"}}>Linking Required</h5>
             </div>
           </div>
         ) : (
           <div className="netbanking">
             <div>
               <img
-                src="https://onemg.gumlet.io/marketing/b3328bf5-3494-42bc-be46-f84da4e5b724.jpg"
+                src="https://onemg.gumlet.io/image/upload/m56yb9uqxdypc7hdrn4a.png"
                 alt=""
               />
-              <p>Lorem, ipsum.</p>
+              <p>ICICI</p>
             </div>
             <div>
               <img
-                src="https://onemg.gumlet.io/marketing/b3328bf5-3494-42bc-be46-f84da4e5b724.jpg"
+                src="https://onemg.gumlet.io/marketing/ef67d9dc-6d6d-478b-8fcf-6b42f730852d.png"
                 alt=""
               />
-              <p>Lorem, ipsum.</p>
+              <p>HDFC</p>
             </div>
             <div>
               <img
-                src="https://onemg.gumlet.io/marketing/b3328bf5-3494-42bc-be46-f84da4e5b724.jpg"
+                src="https://res.cloudinary.com/du8msdgbj/image/upload/v1529400496/marketing/p1pmddrmfgus2qiuznm1.png"
                 alt=""
               />
-              <p>Lorem, ipsum.</p>
+              <p>AXIS</p>
             </div>
             <div>
               <img
-                src="https://onemg.gumlet.io/marketing/b3328bf5-3494-42bc-be46-f84da4e5b724.jpg"
+                src="https://onemg.gumlet.io/marketing/0104bc4f-ac20-448c-8862-44d3d7a60658.png"
                 alt=""
               />
-              <p>Lorem, ipsum.</p>
+              <p>KOTAK</p>
             </div>
             <div>
               <img
-                src="https://onemg.gumlet.io/marketing/b3328bf5-3494-42bc-be46-f84da4e5b724.jpg"
+                src="https://onemg.gumlet.io/marketing/46eba1af-8537-4b6d-95f0-bf81cfcb90a1.png"
                 alt=""
               />
-              <p>Lorem, ipsum.</p>
+              <p>SBI</p>
             </div>
           </div>
         )}
