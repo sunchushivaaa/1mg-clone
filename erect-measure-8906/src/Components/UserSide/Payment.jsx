@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../Styles/UserSide/Payment.scss";
 import discount from "../Images/discount.jpg";
+import { Navigate, useNavigate } from "react-router-dom";
 const pidda = [
   {
     name: "UPI",
@@ -34,6 +35,12 @@ const pidda = [
   },
 ];
 function Payment() {
+  const navigate=useNavigate()
+const end=()=>{
+alert("Slot reserverd")
+navigate("/")
+}
+
   const [chotaPidda, setChotapidda] = useState([
     {
       name: "UPI",
@@ -302,7 +309,7 @@ function Payment() {
             </div>
           </div>
           <div>
-            <button className="Enter_detail_btn">ENTER UPI DETAIL</button>
+            <button onClick={end} className="Enter_detail_btn">ENTER UPI DETAIL</button>
           </div>
         </div>
       </div>

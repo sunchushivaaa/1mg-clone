@@ -416,8 +416,8 @@ export default function Home() {
       name: "Dr. Reckeweg R9 Cough Drop",
       desc: "1 Bottle of 22 ml Drop",
       detail: "Delivery by",
-      price:243 ,
-      O_price:270 ,
+      price: 243,
+      O_price: 270,
       discount: "10% off",
     },
     {
@@ -425,8 +425,8 @@ export default function Home() {
       name: "Dr Willmar Schwabe India Alpha-Coff Cough Syrup",
       desc: "1 Bottle of 100 ml Syrup",
       detail: "Delivery by",
-      price:99 ,
-      O_price:115 ,
+      price: 99,
+      O_price: 115,
       discount: "14% off",
     },
     {
@@ -434,8 +434,8 @@ export default function Home() {
       name: "Dr. Reckeweg Bio-Combination 6 (BC 6) Tablet",
       desc: "1 Bottle of 20 gm Biocombination Tablet",
       detail: "Delivery by",
-      price:171 ,
-      O_price:185 ,
+      price: 171,
+      O_price: 185,
       discount: "7% off",
     },
     {
@@ -443,7 +443,7 @@ export default function Home() {
       name: "Dr. Reckeweg R8 Jut-U-Sin Cough Syrup",
       desc: "1 Bottle of 150 ml Syrup",
       detail: "Delivery by",
-      price:403 ,
+      price: 403,
       O_price: 490,
       discount: "17% off",
     },
@@ -470,7 +470,7 @@ export default function Home() {
       name: "Medisynth Kofeez Cough Syrup",
       desc: "2 Bottles (minimum) of 120 ml Syrup",
       detail: "Delivery by",
-      price:114 ,
+      price: 114,
       O_price: 120,
       discount: "5% off",
     },
@@ -488,8 +488,8 @@ export default function Home() {
       name: "Bakson's Aller Aid Tablet",
       desc: "1 Bottle of 75 tablets",
       detail: "Delivery by",
-      price:178 ,
-      O_price:215 ,
+      price: 178,
+      O_price: 215,
       discount: "1% off",
     },
     {
@@ -497,8 +497,8 @@ export default function Home() {
       name: "SBL Bio-Combination 6 Tablet",
       desc: "1 Bottle of 25 gm Biocombination Tablet",
       detail: "Delivery by",
-      price:75 ,
-      O_price:105 ,
+      price: 75,
+      O_price: 105,
       discount: "28% off",
     },
     {
@@ -506,7 +506,7 @@ export default function Home() {
       name: "SBL Hepar Sulphur Dilution 200 CH",
       desc: "1 Bottle of 30 ml Dilution",
       detail: "Delivery by",
-      price:90 ,
+      price: 90,
       O_price: 105,
       discount: "14% off",
     },
@@ -516,7 +516,7 @@ export default function Home() {
       desc: "1 Bottle of 75 tablets",
       detail: "Delivery by",
       price: 186,
-      O_price:215 ,
+      O_price: 215,
       discount: "13% off",
     },
     {
@@ -528,11 +528,9 @@ export default function Home() {
       O_price: 255,
       discount: "10% off",
     },
-    
   ];
-  
+
   const slider7 = {
-   
     dots: true,
     arrows: true,
     infinite: true,
@@ -572,11 +570,10 @@ export default function Home() {
       className="Home"
       style={{ width: "100%", overflow: "hidden", padding: "20px" }}
     >
-      <h1>Home Page</h1>
       <h3 className="tagname">Shop by health concerns</h3>
       <div style={{ background: "white " }}>
         <Slider {...slider1}>
-          {Shop_by_health_concerns.map((item,index) => (
+          {Shop_by_health_concerns.map((item, index) => (
             <ShopHealth name={item.name} img={item.img} key={index} />
           ))}
         </Slider>
@@ -590,7 +587,7 @@ export default function Home() {
 
       <h3 className="tagname">Full body health checkups</h3>
       <Slider {...slider3}>
-        {Full_body_health_checkups.map((item,index) => (
+        {Full_body_health_checkups.map((item, index) => (
           <FullBody
             name={item.name}
             img={item.img}
