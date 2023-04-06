@@ -2,7 +2,7 @@ import styles from "../Styles/UserSide/Footer.module.css";
 export default function Footer() {
   return (
     <div className={styles.Footer}>
-      <div className={styles.Text}>
+      <div id="media_sc" style={{flexWrap:"wrap"}} className={styles.Text}>
         <div>
           <p className={styles.Category}>Know Us</p>
           <p>About Us</p>
@@ -41,9 +41,9 @@ export default function Footer() {
           <p>Instagram</p>
         </div>
       </div>
-      <div className={styles.Divide}></div>
-      <div className={styles.Benefits}>
-        <div>
+      <div  className={styles.Divide}></div>
+      <div style={{flexWrap:"wrap"}} className={styles.Benefits}>
+        <div style={{width:"max-content",maxWidth:"320px"}}>
           <div>
             <img
               src="https://onemg.gumlet.io/secure-rebrand_x6f8yq.svg"
@@ -59,7 +59,7 @@ export default function Footer() {
             </p>
           </div>
         </div>
-        <div>
+        <div style={{width:"max-content",maxWidth:"320px"}}>
           <div>
             <img
               src="https://onemg.gumlet.io/reliable-rebrand_rcpof3.svg"
@@ -74,7 +74,7 @@ export default function Footer() {
             </p>
           </div>
         </div>
-        <div>
+        <div style={{width:"max-content",maxWidth:"320px"}}>
           <div>
             <img
               src="https://onemg.gumlet.io/affordable-rebrand_ivgidq.svg"

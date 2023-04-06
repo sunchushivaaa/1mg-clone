@@ -46,7 +46,7 @@ const LoginComponent = () => {
   
    
   return (
-    <div className={styles.loginDiv}>
+    <div style={{background:"white"}} className={styles.loginDiv}>
          <form onSubmit={handleSubmit}>
               <h1 className={styles.loginHead}>Sign In</h1>
               <div className={styles.loginDiv1}>
