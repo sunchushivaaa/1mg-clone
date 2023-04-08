@@ -17,6 +17,7 @@ const RedirectToLogin = () => {
   return (
     <div>
       <p style={{ textAlign: "center", fontWeight: "bold" }}>
+      
         Redirecting to you login page {count} seconds
       </p>
     </div>

@@ -6,7 +6,25 @@
     gap:30px;
     margin:auto;
     margin-top:1rem;
+   
+    
+    
 }
+.loading{
+        width: 30px;
+        height: 30px;
+        border: 10px solid black;
+        border-top: 10px solid tomato;
+        position: relative;
+        animation: mymove 2s infinite linear;
+        border-radius: 50%;
+      
+      
+}
+@keyframes mymove {
+    from {rotate: 0deg;}
+    to {rotate: 360deg;}
+  }
    
 
 

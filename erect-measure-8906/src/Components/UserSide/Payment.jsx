@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState ,useEffect} from "react";
 import "../Styles/UserSide/Payment.scss";
 import discount from "../Images/discount.jpg";
 import { Navigate, useNavigate } from "react-router-dom";
+import { toast } from "react-hot-toast";
 const pidda = [
   {
     name: "UPI",
@@ -37,8 +38,18 @@ const pidda = [
 function Payment() {
   const navigate=useNavigate()
 const end=()=>{
-alert("Slot reserverd")
-navigate("/")
+  toast.success("payment Successfull 😍!", {
+    style: {
+      borderRadius: "50px",
+      background: "#3be710",
+      color: "black",
+      padding: "1rem 1.5rem",
+      fontWeight: "600",
+    },
+  })
+  
+  navigate("/")
+
 }
 
   const [chotaPidda, setChotapidda] = useState([
@@ -73,9 +84,27 @@ navigate("/")
       active: "none",
     },
   ]);
+
+
   const [currentindex, setCurrentindex] = useState(0);
+  const [totalPrice, setTotalPrice] = useState(0);
+
+  useEffect(() => {
+    // get the cart data from local storage
+    let cart_data = JSON.parse(localStorage.getItem("cart_data"));
+   
+    let sum = 0;
+
+    cart_data.forEach((ele) => {
+      // calculate the total price of all items in the cart
+      sum += ele.price;
+    });
+    // set the total price state
+    setTotalPrice(sum);
+  }, []);
+
   return (
-    <div id="payment" className="payment">
+    <form onSubmit={end} id="payment" className="payment">
       <div className="payment_main">
         <div className="card">
           {chotaPidda.map((item, index) => (
@@ -117,7 +146,7 @@ navigate("/")
               <h5>Saved UPI ID</h5>
               <h5>Pay via new UPI ID</h5>
               <div className="exupi">
-                <input type="text" placeholder="Ex:mobilenumber@upi" />
+                <input type="text" placeholder="Ex:mobilenumber@upi" required/>
                 <label>
                   The UPI ID is in the format of name/phone <br />{" "}
                   number@bankname
@@ -296,24 +325,22 @@ navigate("/")
             </div>
           </div>
           <div className="new_total_price">
-            <p>Consultation Fee</p>
-            <p>₹700</p>
             <p>Price Discount</p>
             <p>-₹350</p>
-            <p>To be paid</p>
+            <p>GST</p>
             <p>₹350</p>
             <div>
               <p>
-                Total Savings : <span>₹350</span>
+                Total price : <span>{totalPrice}</span>
               </p>
             </div>
           </div>
           <div>
-            <button onClick={end} className="Enter_detail_btn">ENTER UPI DETAIL</button>
+            <button  className="Enter_detail_btn">Confirm Payment</button>
           </div>
         </div>
       </div>
-    </div>
+    </form>
   );
 }
 

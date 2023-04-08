@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate} from 'react-router-dom';
-import Styles from "../Styles/UserSide/Register.module.css"
 import {useDispatch, useSelector} from "react-redux";
+import  "../Styles/UserSide/Register.scss";
 import { registerUser } from '../../Redux/UserSide/Auth Redux/action';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -42,33 +42,33 @@ const Register = () => {
 
   useEffect(()=>{
       if(currentUser){
-        navigate("/");
+        navigate("/register");
       }
   },[currentUser,navigate])
   return (
    
-    <div className={Styles.regDiv} id="register_page">
+    <div  id="register_page" className='register_page'>
          <form onSubmit={handleSubmit}>
         
-            <h1 className={Styles.head}>Sign Up</h1>
-              <div className={Styles.labelDiv1}>
+            <h1 >Sign Up</h1>
+              <div >
                 <label>Username</label><br/>
                 <input type="text" placeholder="username" name="username" onChange={handleChange} value={registeredData.username} required/>
               </div>
-              <div className={Styles.labelDiv2}>
+              <div >
                 <label >Email</label><br/>
                 <input type="email" placeholder="email" name="email" onChange={handleChange} value={registeredData.email} required/>
               </div>
-              <div className={Styles.labelDiv3}>
+              <div >
                 <label>Password</label><br/>
                 <input type="password" placeholder="at least 6 charactor" name="password" onChange={handleChange} value={registeredData.password} required/>
               </div>
-              <div className={Styles.labelDiv4}>
+              <div >
                 <label>Confirm Password</label><br/>
                 <input type="password" placeholder="confirm password" name="confirmpassword" onChange={handleChange} value={registeredData.confirmpassword} required/>
               </div>
-              <button type="submit" className={Styles.btn}>Register</button>
-              <div className={Styles.lastDiv}>
+              <button type="submit">Register</button>
+              <div >
                  <p>Already have an account?<Link to="/login">login</Link></p>
               </div>
          </form>

@@ -14,16 +14,26 @@
   height: 60px;
   margin-right: 1.5%;
 }
+.Navbar > .Top > .Logo > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #ca6364;
+  font-family: cursive;
+}
 .Navbar > .Top > .Logo > a > img {
   height: 100%;
+  width: 60px;
   object-fit: contain;
 }
 .Navbar > .Top > .Services {
-  width: 40%;
+  width: max-content;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-right: 20%;
+  gap: 20px;
   letter-spacing: 1px;
 }
 .Navbar > .Top > .Services > h3 > a:hover,
@@ -83,6 +93,18 @@
   /* justify-content: space-between; */
   align-items: center;
 }
+.serched_product {
+  background-color: white;
+  position: absolute;
+  left: 0;
+  top: 50px;
+  width: 100%;
+  height: 400px;
+}
+.Navbar > .Middle > .Input > form {
+  position: relative;
+}
+
 .Navbar > .Middle > .Input > select,
 .Navbar > .Middle > .Input > form > input {
   font-size: 0.9rem;
@@ -368,5 +390,3 @@
     display: block;
   }
 }
-
-

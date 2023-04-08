@@ -36,7 +36,6 @@ function DoctorComponent3() {
     // setForm([...form, chiththa]);
     // setcCiththa(initialState);
     // closePopup();
-    console.log(chiththa)
     if(chiththa.patient.trim().length>0 && chiththa.age.trim().length>0 && chiththa.patient!=="Choose_option"  ){
  setForm([...form, chiththa]);
     setcCiththa(initialState);

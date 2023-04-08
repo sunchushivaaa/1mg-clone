@@ -1,8 +1,60 @@
 import styles from "../Styles/UserSide/Navbar.module.css";
-import logo from "../Images/logo.png";
-import { Link } from "react-router-dom";
+import logo from "../Images/dc.png";
+import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import axios from "axios";
 
 export default function Navbar() {
+  const [user, setUser] = useState(localStorage.getItem("validkey"));
+  const [serchdata, setSearchdata] = useState([]);
+  const [drop, setDrop] = useState("none");
+  const navigate=useNavigate()
+
+  const stylesss = {
+    background: "white",
+    position: "absolute",
+    left: "0",
+    top: "40px",
+    width: "100%",
+    height: "400px",
+    zIndex: "20",
+    overflowY: "scroll",
+    boxShadow: "-1px 1px 3px rgba(0,0,0,0.3)",
+    display: drop,
+  };
+  const style1={
+    background: "transparent",
+    position: "fixed",
+    left: "0",
+    top: "0px",
+    width: "100%",
+    height: "100vh",
+    zIndex: "-1",
+    overflowY: "scroll",
+    boxShadow: "-1px 1px 3px rgba(0,0,0,0.3)",
+    display: drop,
+  }
+  const handlelogout = () => {
+    localStorage.removeItem("validkey");
+    setUser(localStorage.getItem("validkey"));
+  };
+  const searchproduct = (e) => {
+    // console.log(e.target.value)
+    setTimeout(() => {
+      axios.get(`https://fivemg-backend.onrender.com/products`).then((res) => {
+        setSearchdata(res.data);
+        setDrop("block");
+      });
+    }, 3000);
+  };
+  const handleDrop=()=>{
+    setDrop("none")
+  }
+  const medicine_detail = (item) => {
+    localStorage.setItem("medicine_details", JSON.stringify(item));
+    window.location.href="/medicinesdetails"
+  };
+
   return (
     <div className={styles.Navbar}>
       <div className={styles.Top}>
@@ -13,32 +65,41 @@ export default function Navbar() {
               src={logo}
               alt="logo"
             />
+            <h4> 5MG</h4>
           </Link>
         </div>
         <div className={styles.Services}>
           <h3>
-            <Link to="/medicines">MEDICINES</Link>
+            <Link to="/medicines">💊 MEDICINES</Link>
           </h3>
           <h3>
-            <Link to="/labtest">LAB TESTS</Link>
+            <Link to="/medicines">🧪 LAB TESTS</Link>
             <span>SAFE</span>
           </h3>
           <h3>
-            <Link to="/consultdoctor">CONSULT DOCTORS</Link>
+            <Link to="/consultdoctor">🧑‍⚕️ CONSULT DOCTORS</Link>
           </h3>
         </div>
         <div className={styles.Login}>
-          <p>
-            <Link to="/login">Login</Link>
-          </p>
-          <p>|</p>
-          <p>
-            <Link to="/login">Sign up</Link>
-          </p>
+          {user ? (
+            <div style={{ display: "flex", gap: "10px" }}>
+              <p>👨‍💼 {user}</p>
+              <p onClick={handlelogout}>Logout</p>
+            </div>
+          ) : (
+            <div style={{ display: "flex", gap: "10px" }}>
+              <p>
+                <Link to="/login">Login</Link>
+              </p>
+              <p>
+                <Link to="/register">Sign up</Link>
+              </p>
+            </div>
+          )}
         </div>
         <div className={styles.Cart}>
           <p>
-            <Link to="/cart">Cart</Link>
+            <Link to="/cart">🛒 Cart</Link>
           </p>
         </div>
         <button className={styles.Menu}>Menu</button>
@@ -54,11 +115,78 @@ export default function Navbar() {
             <option value="Hyderabad">Hyderabad</option>
           </select>
           <form>
-            <input
-              type="text"
-              name="search"
-              placeholder="Search for Medicines and Health Products"
-            />
+            <div
+              style={{
+                position: "relative",
+                flexGrow: "1",
+                maxWidth: "500px",
+                margin: "0 10px",
+              }}
+            >
+              <input
+                style={{
+                  fontSize: "0.9rem",
+                  padding: "10px 20px",
+                  marginRight: "0.3%",
+                  textOverflow: " ellipsis",
+                  cursor: "pointer",
+                  border: "none",
+                  outline: "none",
+                  backgroundColor: "rgb(242, 242, 242)",
+                  letterSpacing: "0.8px",
+                  width: "100%",
+                }}
+                onChange={searchproduct}
+                type="text"
+                name="search"
+                placeholder="Search for Medicines and Health Products"
+              />
+
+              <div style={stylesss} className="serched_product">
+                <div onClick={handleDrop} style={style1}>
+
+                </div>
+                {serchdata.map((item) => (
+                  <div
+                  onClick={()=>medicine_detail(item)}
+                    style={{
+                      display: "flex",
+                      gap: "10px",
+                      margin: "10px 0",
+                      alignItems: "center",
+                      justifyContent: "flex-start",
+                      width: "100%",
+                      boxShadow: "0px 0px 5px rgba(0,0,0,0.3)",
+                      cursor:"pointer"
+                    }}
+                    key={item.id}
+                  >
+                    <div
+                      style={{
+                        width: "40%",
+                        borderRadius: "8px",
+                        boxShadow: "0px 0px 3px rgba(0,0,0,0.3)",
+                        padding: "2%",
+                        margin: "2%",
+                      }}
+                    >
+                      <img
+                        style={{
+                          height: "100px",
+                          objectFit: "contain",
+                          width: "100%",
+                        }}
+                        src={item.image}
+                        alt=""
+                      />
+                    </div>
+                    <p style={{ width: "60%", textAlign: "left" }}>
+                      {item.title}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
             <input type="submit" value="Find" />
           </form>
           <button className={`${styles.Menu} ${styles.Menu2}`}>Menu</button>

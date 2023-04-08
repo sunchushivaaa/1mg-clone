@@ -13,6 +13,7 @@ import Payment from "./Components/UserSide/Payment";
 import Register from "./Pages/UserSide/Register";
 import FilterPage from "./Components/UserSide/FilterPage";
 import PrivateRoute from "./Components/UserSide/PrivateRoute";
+import ProductDetail from "./Pages/UserSide/ProductDetail";
 
 export default function MainRoutes() {
   return (
@@ -24,12 +25,13 @@ export default function MainRoutes() {
       <Route path="/medicines" element={<FilterPage/>} />
       <Route path="/cart" element={<Cart />} />
       <Route path="/consultdoctor" element={<ConsultDoctor />} />
-      <Route path="/abcd/" element={<PrivateRoute><DoctorComponent3/></PrivateRoute>}/>
+      <Route path="/abcd/" element={<DoctorComponent3/>}/>
       <Route path="/symptoms" element={<Doctorsymptoms/>}/>
-      <Route path="/doctor_final" element={<DoctorFinal/>}/>
       <Route path="/doctor_final" element={<DoctorFinal/>}/>
       <Route path="/payment" element={<Payment/>} />
       <Route path="/register" element={<Register/>}/>
+      <Route path="/medicinesdetails" element={<ProductDetail/>}/>
+
       <Route path="*" element={<Error />} />
     </Routes>
   );
