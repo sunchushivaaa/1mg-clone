@@ -2,7 +2,7 @@
 import {createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, updateProfile} from 'firebase/auth';
 import { auth } from "../../../firebase"
 import { LOGIN_FAILURE, LOGIN_REQUEST, LOGIN_SUCCESS, LOGOUT_FAILURE, LOGOUT_REQUEST, LOGOUT_SUCCESS, REGISTER_FAILURE, REGISTER_REQUEST, REGISTER_SUCCESS, SET_USER } from "./actionTypes"
-
+import toast from "react-hot-toast";
 export const registerRequest=()=>{
     return{
         type:REGISTER_REQUEST,
@@ -28,17 +28,35 @@ export const registerUser=(email,password,username)=>(dispatch)=>{
   return createUserWithEmailAndPassword(auth,email,password)
     .then((userCredential)=>{
         const user=userCredential.user;
-        console.log(user)
         updateProfile(user,{
             displayName:username,
         })
        
         dispatch(registerSuccess(user))
+       
+
+    }).then(()=>{
+        toast.success("Account created successfully !", {
+            style: {
+              borderRadius: "50px",
+              background: "#989898",
+              color: "#ffffff",
+              padding: "1rem 1.5rem",
+              fontWeight: "600",
+            },
+          })
     })
     .catch((error)=>{
         const errorMessage = error.message;
-        console.log(errorMessage);
-        dispatch(registerFailure(errorMessage))
+        dispatch(registerFailure( toast.error(errorMessage, {
+            style: {
+              borderRadius: "50px",
+              background: "#989898",
+              color: "#ffffff",
+              padding: "1rem 1.5rem",
+              fontWeight: "600",
+            },
+          })))
     })
 }
 
@@ -69,13 +87,31 @@ export const loginUser=(email,password)=>(dispatch)=>{
     return signInWithEmailAndPassword(auth,email,password)
       .then((userCredential)=>{
           const user=userCredential.user;
-          console.log(user)
           dispatch(loginSuccess(user))
-      })
+          localStorage.setItem("validkey",user.displayName) 
+      }).then(()=>{
+        toast.success("login successfull !", {
+            style: {
+              borderRadius: "50px",
+              background: "#989898",
+              color: "#ffffff",
+              padding: "1rem 1.5rem",
+              fontWeight: "600",
+            },
+          })
+    })
+      
       .catch((error)=>{
           const errorMessage = error.message;
-          console.log(errorMessage);
-          dispatch(loginFailure(errorMessage))
+          dispatch(loginFailure(toast.error(errorMessage, {
+            style: {
+              borderRadius: "50px",
+              background: "#989898",
+              color: "#ffffff",
+              padding: "1rem 1.5rem",
+              fontWeight: "600",
+            },
+          })))
       })
   }
 
@@ -108,7 +144,6 @@ export const loginUser=(email,password)=>(dispatch)=>{
     })
     .catch((error)=>{
         const errorMessage = error.message;
-        console.log(errorMessage);
         dispatch(logoutFailure(errorMessage))
     })
 }

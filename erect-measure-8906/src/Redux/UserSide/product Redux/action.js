@@ -20,12 +20,12 @@ export const getProduct=(param)=>(dispatch)=>{
     dispatch(getProductRequest());
     axios.get("https://fivemg-backend.onrender.com/products",param)
     .then((res)=>{
-        console.log(res);
         dispatch(getTotalCount(Number(res.headers["x-total-count"])));
         dispatch(getProductSuccess(res.data))
+        // console.log(res.data)
     })
     .catch((err)=>{
-        console.log(err);
         dispatch(getProductFailure())
     })
 }
+

@@ -17,7 +17,6 @@ const count=useSelector((store)=> store.ProductReducer.totalCount,)
 const {page,limit}=pageFilter;
 
  const totalPages=Math.ceil(count/limit);
- console.log(totalPages)
 
     const handleSort=(e)=>{
       setOrder(e.target.value);
@@ -28,10 +27,10 @@ const {page,limit}=pageFilter;
     <div id="filter_scss" className='filter_scss'>
           <div className="filter_main">
              <Sidebar order={order} />
-             <div style={{width:"90%",marginTop:"2rem"}}>
-                <h1 className="text1">THE AYURVEDA STORE</h1>
+             <div style={{marginTop:"2rem"}}>
+              
                 <img src={src} alt="pic" className="banner1"/>
-                <div style={{display:"flex",width:"90%",margin:"auto",justifyContent:"space-between",marginTop:"2rem"}}>
+                <div style={{display:"flex",margin:"auto",justifyContent:"space-evenly",marginTop:"2rem"}}>
                     <p>All Products</p>
                     <div>
                        <span>Sort By:</span>

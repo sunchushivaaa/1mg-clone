@@ -2,7 +2,8 @@ import React from "react";
 import DoctorComponent2 from "./DoctorComponent2";
 import "../Styles/UserSide/DoctorComponent1.scss";
 import Slider from "react-slick";
-import {Link} from "react-router-dom"
+import {Link, useNavigate} from "react-router-dom"
+import { toast } from "react-hot-toast";
 const itemName = [
   {
     name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit iure incidunt voluptas sequi mollitia accusamus vitae, voluptatem amet veritatis minima.",
@@ -70,6 +71,22 @@ const itemSlider = {
 };
 
 function DoctorComponent1() {
+  const navigate=useNavigate()
+  const handleconsult=()=>{
+    if(localStorage.getItem("validkey")){
+
+      navigate("/abcd")
+    }else{
+      toast.error("Please Login first ",{  style: {
+        borderRadius: "50px",
+        background: "#989898",
+        color: "#ffffff",
+        padding: "1rem 1.5rem",
+        fontWeight: "600",
+      }})
+      
+    }
+  }
   return (
     <div id="consultations" className="abu">
       <div className="background">
@@ -204,9 +221,9 @@ function DoctorComponent1() {
             </div>
           </div>
           <div>
-           <Link to="/abcd">
-           <button className="consult_now_button">Start New Consultation</button>
-           </Link>
+          
+           <button onClick={handleconsult} className="consult_now_button">Start New Consultation</button>
+          
           </div>
         </div>
         <div>
