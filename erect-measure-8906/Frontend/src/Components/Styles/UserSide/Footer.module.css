@@ -1,0 +1,361 @@
+:root {
+  --orange-color: #ff6f61;
+  --yellow-color: #ff6f61;
+}
+.Footer {
+  background-color: rgb(255, 243, 243);
+  padding: 3% 5%;
+  margin-top: 3%;
+}
+.Divide {
+  border-top: 1px solid rgb(203, 203, 203);
+}
+.Footer > .Text {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5%;
+}
+.Footer > .Text > div > p {
+  margin-bottom: 4%;
+  color: rgb(63, 63, 63);
+  cursor: pointer;
+  transition: 0.15s;
+}
+.Footer > .Text > div > p:hover {
+  color: var(--orange-color);
+}
+.Footer > .Text > div > .Category {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 8%;
+}
+.Footer > .Text > div > button {
+  margin-bottom: 10%;
+  border-radius: 5px;
+  background-color: var(--yellow-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.15s;
+  padding: 5%;
+}
+.Footer > .Text > div > button:hover {
+  color: rgb(238, 238, 238);
+}
+.Footer > .Benefits {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.Footer > .Benefits > div {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Footer > .Benefits > div > div > img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+.Footer > .Benefits > div > div:first-child {
+  width: 40%;
+  margin-right: 5%;
+}
+.Footer > .Benefits > div > div > h3 {
+  margin-bottom: 5%;
+  letter-spacing: 1px;
+}
+.Footer > .Benefits > div > div > p {
+  font-size: small;
+  text-align: justify;
+  line-height: 20px;
+}
+.Footer > .Copyright {
+  margin-top: 2%;
+}
+.Footer > .Copyright > p {
+  font-weight: bold;
+  color: rgb(158, 158, 158);
+  letter-spacing: -0.2px;
+  text-align: justify;
+}
+@media all and (max-width: 1200px) {
+  .Footer > .Text {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5%;
+  }
+  .Footer > .Text > div > p {
+    font-size: small;
+    margin-bottom: 4%;
+    color: rgb(63, 63, 63);
+    cursor: pointer;
+    transition: 0.15s;
+  }
+  .Footer > .Text > div > .Category {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 8%;
+  }
+  .Footer > .Text > div > button {
+    margin-bottom: 10%;
+    border-radius: 4px;
+    background-color: var(--yellow-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: x-small;
+    font-weight: bold;
+    transition: 0.15s;
+    padding: 4%;
+  }
+  .Footer > .Benefits {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  .Footer > .Benefits > div {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .Footer > .Benefits > div > div > img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+  }
+  .Footer > .Benefits > div > div:first-child {
+    width: 40%;
+    margin-right: 5%;
+  }
+  .Footer > .Benefits > div > div > h3 {
+    font-size: medium;
+  }
+  .Footer > .Benefits > div > div > p {
+    font-size: x-small;
+    text-align: justify;
+    line-height: 15px;
+  }
+}
+@media all and (max-width: 850px) {
+  .Footer > .Text {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5%;
+  }
+  .Footer > .Text > div > p {
+    font-size: x-small;
+    margin-bottom: 4%;
+    color: rgb(63, 63, 63);
+    cursor: pointer;
+    transition: 0.15s;
+  }
+  .Footer > .Text > div > .Category {
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-bottom: 8%;
+  }
+  .Footer > .Text > div > button {
+    margin-bottom: 10%;
+    border-radius: 4px;
+    background-color: var(--yellow-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: xx-small;
+    font-weight: 100;
+    transition: 0.15s;
+    letter-spacing: 0.5px;
+    padding: 5%;
+  }
+  .Footer > .Benefits {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  .Footer > .Benefits > div {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .Footer > .Benefits > div > div > img {
+    width: 40px;
+    height: 80px;
+    object-fit: contain;
+  }
+  .Footer > .Benefits > div > div:first-child {
+    width: 40%;
+    margin-right: 5%;
+  }
+  .Footer > .Benefits > div > div > h3 {
+    font-size: small;
+  }
+  .Footer > .Benefits > div > div > p {
+    font-size: xx-small;
+    text-align: justify;
+    line-height: 13px;
+  }
+  .Footer > .Copyright > p {
+    font-size: small;
+  }
+}
+@media all and (max-width: 600px) {
+  .Footer > .Text {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5%;
+  }
+  .Footer > .Text > div > p {
+    font-size: xx-small;
+    margin-bottom: 4%;
+    color: rgb(63, 63, 63);
+    cursor: pointer;
+    transition: 0.15s;
+  }
+  .Footer > .Text > div > .Category {
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-bottom: 8%;
+  }
+  .Footer > .Text > div > button {
+    margin-bottom: 10%;
+    border-radius: 4px;
+    background-color: var(--yellow-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: xx-small;
+    font-weight: 100;
+    transition: 0.15s;
+    letter-spacing: 0.5px;
+    padding: 5%;
+  }
+  .Footer > .Benefits {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  .Footer > .Benefits > div {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .Footer > .Benefits > div > div > img {
+    width: 40px;
+    height: 80px;
+    object-fit: contain;
+  }
+  .Footer > .Benefits > div > div:first-child {
+    width: 40%;
+    margin-right: 5%;
+  }
+  .Footer > .Benefits > div > div > h3 {
+    font-size: x-small;
+  }
+  .Footer > .Benefits > div > div > p {
+    font-size: 0.4rem;
+    text-align: justify;
+    line-height: 8px;
+  }
+  .Footer > .Copyright > p {
+    font-size: x-small;
+  }
+}
+@media all and (max-width: 500px) {
+  .Footer > .Text {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5%;
+  }
+  .Footer > .Text > div > p {
+    font-size: 0.4rem;
+    margin-bottom: 4%;
+    color: rgb(63, 63, 63);
+    cursor: pointer;
+    transition: 0.15s;
+  }
+  .Footer > .Text > div > .Category {
+    font-weight: bold;
+    font-size: 0.6rem;
+    margin-bottom: 8%;
+  }
+  .Footer > .Text > div > button {
+    margin-bottom: 15%;
+    border-radius: 3px;
+    background-color: var(--yellow-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 0.4rem;
+    font-weight: 100;
+    transition: 0.15s;
+    letter-spacing: 0.5px;
+    padding: 3% 5%;
+  }
+  .Footer > .Benefits {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  .Footer > .Benefits > div {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .Footer > .Benefits > div > div > img {
+    width: 30px;
+    height: 60px;
+    object-fit: contain;
+  }
+  .Footer > .Benefits > div > div:first-child {
+    width: 40%;
+    margin-right: 5%;
+  }
+  .Footer > .Benefits > div > div > h3 {
+    font-size: xx-small;
+  }
+  .Footer > .Benefits > div > div > p {
+    font-size: 0.3rem;
+    text-align: justify;
+    line-height: 5px;
+  }
+  .Footer > .Copyright > p {
+    font-size: xx-small;
+  }
+}

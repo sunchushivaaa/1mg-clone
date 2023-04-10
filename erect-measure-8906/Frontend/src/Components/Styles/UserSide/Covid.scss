@@ -1,0 +1,290 @@
+#covid.covid {
+  .description {
+    display: flex;
+    background-color: #fdf0df;
+    align-items: center;
+    padding: 30px;
+    .des-1 {
+      margin-left: 60px;
+      width: 40%;
+      margin: auto;
+      h4 {
+        color: #767676;
+        font-size: 18px;
+      }
+      h1 {
+        font-weight: 700;
+        font-size: 35px;
+        margin-bottom: 15px;
+      }
+      .num {
+        font-weight: 700;
+        font-size: 45px;
+      }
+    }
+    .des-2 {
+      margin-right: 60px;
+      width: 40%;
+      margin: auto;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  .description-2 {
+    display: flex;
+    background-color: #fdf0df;
+    align-items: center;
+    width: 80%;
+    margin: 60px auto;
+    border-radius: 10px;
+    .d1 {
+      margin-left: 20px;
+      padding: 10px;
+
+      h2 {
+        font-weight: 100;
+      }
+      h1 {
+        color: #3b3b3b;
+      }
+      p {
+        color: #767676;
+      }
+
+      .book_now {
+        padding: 10px 40px;
+        color: white;
+        border: none;
+        background: #ff6f61;
+        background-image: linear-gradient(
+          to right,
+          #f24426 0%,
+          #ff6f55 51%,
+          #f85336 100%
+        );
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 20px;
+        cursor: pointer;
+        text-align: center;
+        text-transform: uppercase;
+        transition: 0.5s;
+        background-size: 200% auto;
+        box-shadow: 0 0 20px #eee;
+        border-radius: 10px;
+        display: block;
+        border: none;
+      }
+      .book_now:hover {
+        background-position: right center; /* change the direction of the change here */
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+    img {
+      float: right;
+      border-bottom-right-radius: 10px;
+    }
+  }
+  .grid-view {
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+    gap: 20px;
+
+    img {
+      width: 85%;
+    }
+  }
+  .bookBooks {
+    background-color: #fdf0df;
+    .con_tainer {
+      width: 80%;
+      margin: auto;
+      .book_des {
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        h3 {
+          color: #767676;
+        }
+        select {
+          width: max-content;
+          margin: 10px 0;
+          background-color: tomato;
+          border: none;
+          padding: 10px 40px;
+          color: white;
+          outline: none;
+          font-size: 20px;
+          font-weight: bold;
+          option {
+            color: black;
+            background-color: rgb(249, 231, 196);
+          }
+        }
+      }
+
+      .download_div_main {
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+        img {
+          width: 100%;
+          margin: auto;
+        }
+        .download_div {
+          .bg_img {
+          }
+          button {
+            padding: 15px 40px;
+            color: white;
+            background-image: linear-gradient(
+              to right,
+              #f24426 0%,
+              #ff6f55 51%,
+              #f85336 100%
+            );
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 20px;
+            cursor: pointer;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            box-shadow: 0 0 20px #eee;
+            border: none;
+            width: 100%;
+            margin-bottom: 30px;
+          }
+          .button:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px)  {
+  #covid.covid {
+    .description {
+      flex-direction: column-reverse;
+      width: 95%;
+      margin: auto;
+      border-radius: 4px;
+      .des-1 {
+        width: 100%;
+        h1 {
+          font-size: 24px;
+          margin: 10px 0;
+        }
+        h2 {
+          text-align: center;
+          font-size: 25px !important;
+          margin: 10px 0;
+        }
+      }
+      .des-2 {
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .description-2 {
+      flex-direction: column-reverse;
+    }
+    .grid_main {
+      width: 98%;
+      margin: auto;
+      .heading {
+        font-size: 20px !important;
+        margin-left: 12px;
+      }
+      .grid-view {
+        grid-template-columns: 100%;
+        div {
+          padding: 10px;
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .bookBooks{
+    .con_tainer{
+      .download_div_main{
+        grid-template-columns: 100% !important;
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #covid.covid {
+    .description {
+      flex-direction: column-reverse;
+      width: 95%;
+      margin: auto;
+      border-radius: 4px;
+      .des-1 {
+        width: 100%;
+        h1 {
+          font-size: 24px;
+          margin: 10px 0;
+        }
+        h2 {
+          text-align: center;
+          font-size: 25px !important;
+          margin: 10px 0;
+        }
+      }
+      .des-2 {
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .description-2 {
+      flex-direction: column-reverse;
+    }
+    .grid_main {
+      width: 98%;
+      margin: auto;
+      .heading {
+        font-size: 20px !important;
+        margin-left: 12px;
+      }
+      .grid-view {
+        grid-template-columns: 100%;
+        div {
+          padding: 10px;
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .bookBooks{
+    .con_tainer{
+      .download_div_main{
+        grid-template-columns: 100% !important;
+      }
+    }
+
+  }
+}
