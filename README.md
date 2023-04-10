@@ -29,7 +29,7 @@
  <ul>
  <li>
  <h3>Home Page</h3>
- <img src = "https://user-images.githubusercontent.com/110079977/226098923-8e849b41-c398-41ad-8b02-b8b6876f4395.png" alt = "5mg"/>
+ <img src = "https://www.linkpicture.com/q/Screenshot-2152.png" alt = "5mg"/>
  </li>
  <li>
  <h3>Category Page</h3>
