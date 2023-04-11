@@ -47,7 +47,7 @@ function DoctorFinal() {
           {" "}
           <button className="back">Back</button>
         </Link>
-        <Link to={"/payment"}>
+        <Link to={"/careplan"}>
           {" "}
           <button className="proceed">Proceed</button>{" "}
         </Link>

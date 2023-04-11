@@ -272,7 +272,7 @@ export default function Navbar() {
           <button className={styles.Open} onClick={openPopup}>
           <img width="60%" src={open} alt="" />
           </button>
-          <Link className={styles.Offer} style={{textDecoration:"none",color:"tomato"}} to="/medicines"><h4 >QUICK BUY! Get 15% off on medicines*</h4></Link>
+          <Link className={styles.Offer} style={{textDecoration:"none",color:"tomato"}} to="/offers"><h4 >QUICK BUY! Get off on medicines*</h4></Link>
         </div>
       </div>
       <div className={styles.Divide}></div>

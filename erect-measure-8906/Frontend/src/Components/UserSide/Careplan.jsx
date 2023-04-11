@@ -9,6 +9,11 @@ function Careplan() {
   const Joined = () => {
     navigate("/consultdoctor");
   };
+  const threemonthplan=()=>{
+    const tmonth=275
+   let three= localStorage.setItem("threemonth",tmonth)
+   localStorage.removeItem("cart_data")
+  }
   return (
     <div className="mycare" id="mycare">
       <div className="mycare_top">
@@ -254,11 +259,11 @@ function Careplan() {
         <div className="careplan-total">
           <div className="three_month">
             <input type="radio" />
-            <h2>₹165</h2>
+            <h2 >₹165</h2>
             <p>for 3 months </p>
           </div>
           <div className="six_month">
-            <input type="radio" required />
+            <input onClick={threemonthplan} type="radio" required />
             <h2>₹275</h2>
             <p>for 6 months</p>
           </div>

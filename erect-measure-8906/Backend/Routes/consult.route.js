@@ -16,7 +16,7 @@ consultRouter.post("/add", async (req, res) => {
 //READ
 consultRouter.get("/", async (req, res) => {
   try {
-    const user = await consultModel.find({name:name});
+    const user = await consultModel.find();
     res.status(200).send(user);
   } catch (error) {
     res.status(400).send({ msg: error.message });

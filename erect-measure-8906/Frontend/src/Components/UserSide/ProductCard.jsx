@@ -1,17 +1,15 @@
 import React from "react";
-import { toast } from "react-hot-toast";
 import { AiOutlineStar } from "react-icons/ai";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 const ProductCard = ({ image, title, discount, rating, price, category }) => {
-  const navigate=useNavigate()
+  const navigate = useNavigate();
   // function to add product in the cart
- 
 
   // details of item is stored
   const medicine_detail = (item) => {
     localStorage.setItem("medicine_details", JSON.stringify(item));
-    navigate("/medicinesdetails")
+    navigate("/medicinesdetails");
   };
   return (
     <Wrapper
@@ -56,8 +54,7 @@ const ProductCard = ({ image, title, discount, rating, price, category }) => {
           ₹{price}
         </p>
         <Addbutton
-         
-          style={{ marginRight: "20px", fontWeight: "bold", color: "white" ,}}
+          style={{ marginRight: "20px", fontWeight: "bold", color: "white" }}
         >
           View
         </Addbutton>
@@ -86,7 +83,12 @@ const Button = styled.button`
 `;
 
 const Addbutton = styled.button`
-  background-image: linear-gradient(to right, #cb3115 0%, #f94a2a 51%, #cf2404 100%);
+  background-image: linear-gradient(
+    to right,
+    #cb3115 0%,
+    #f94a2a 51%,
+    #cf2404 100%
+  );
   margin: 10px;
   padding: 15px 45px;
   text-align: center;
@@ -98,7 +100,7 @@ const Addbutton = styled.button`
   border-radius: 10px;
   display: block;
   cursor: pointer;
-  border: none  ;
+  border: none;
   &:hover {
     background-position: right center; /* change the direction of the change here */
     color: #fff;

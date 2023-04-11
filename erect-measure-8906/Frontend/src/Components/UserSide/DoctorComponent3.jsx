@@ -1,50 +1,44 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../Styles/UserSide/DoctorComponent3.scss";
+import axios from "axios";
 import { toast } from "react-hot-toast";
-const initialState = {
-  patient: "",
-  age: "",
-  gender: "Choose_option",
-};
+
 
 function DoctorComponent3() {
-  const [chiththa, setcCiththa] = useState(initialState);
+  const [name, setName] = useState("");
+  const [age, setAge] = useState("");
+  const [gender, setGender] = useState("");
+  const [data, setData] = useState([]);
   const [popup, setPopup] = useState("none");
-  const [form, setForm] = useState([{
-    patient: "Abu Osama",
-    age: "25",
-    gender: "male",
-  }]);
-
   const handleclick = () => {
     setPopup("block");
   };
   const closePopup = () => {
     setPopup("none");
   };
-  const handlechange = (e) => {
-    const { name, value } = e.target;
-    setcCiththa((prev) => {
-      return { ...prev, [name]: name === "age" ? value : value };
-    });
-
-  };
+ 
+  // craete a data to the data base
   const handleSubmit = (e) => {
     e.preventDefault();
+   
   };
   const submitChiththa = () => {
-    // setForm([...form, chiththa]);
-    // setcCiththa(initialState);
-    // closePopup();
-    if(chiththa.patient.trim().length>0 && chiththa.age.trim().length>0 && chiththa.patient!=="Choose_option"  ){
- setForm([...form, chiththa]);
-    setcCiththa(initialState);
-    closePopup();
-    }else{
-      toast.error("Please fill all required fields")
-    }
+    const Form = {
+      name,
+      age,
+      gender,
+    };
+    axios.post("https://dark-gray-hare-toga.cyclic.app//consult/add", Form).then((res) => {
+      toast.success("User added Successfully")
+      
+    });
+
+    // get the data from data base
   };
+  axios.get("https://dark-gray-hare-toga.cyclic.app/consult").then((res) => {
+    setData(res.data);
+  });
 
   return (
     <div id="doctorform" className="doctorform">
@@ -64,11 +58,11 @@ function DoctorComponent3() {
         </div>
       </div>
       <div className="data_section">
-        {form.map((item) => (
+        {data.map((item) => (
           <div className="maped">
             <div>
               <h4>NAME</h4>
-              <p>{item.patient}</p>
+              <p>{item.name}</p>
               <h4>AGE</h4>
               <p>{item.age}</p>
               <h4>GENDER</h4>
@@ -111,9 +105,11 @@ function DoctorComponent3() {
                 type="text"
                 placeholder="Enter patient's name"
                 name="patient"
-                value={chiththa.patient}
+                // value={chiththa.patient}
+                value={name}
                 required
-                onChange={(e) => handlechange(e)}
+                // onChange={(e) => handlechange(e)}
+                onChange={(e) => setName(e.target.value)}
               />
             </div>
             <div>
@@ -121,23 +117,29 @@ function DoctorComponent3() {
                 type="text"
                 name="age"
                 placeholder="Enter patient's age"
-                value={chiththa.age}
+                // value={chiththa.age}
+                value={age}
                 required
-                onChange={(e) => handlechange(e)}
+                // onChange={(e) => handlechange(e)}
+                onChange={(e) => setAge(e.target.value)}
               />
             </div>
             <label className="gendertag">Gender</label>
             <select
-              value={chiththa.gender}
+              // value={chiththa.gender}
               name="gender"
               id=""
-              onChange={(e) => handlechange(e)}
+              // onChange={(e) => handlechange(e)}
+              value={gender}
+              onChange={(e) => setGender(e.target.value)}
             >
               <option value="Choose_option">Choose option</option>
               <option value="male">male</option>
               <option value="female">female</option>
             </select>
-            <button onClick={submitChiththa} type="submit" >Submit</button>
+            <button onClick={submitChiththa} type="submit">
+              Submit
+            </button>
             <button className="closeForm" onClick={closePopup}>
               Cancel
             </button>
