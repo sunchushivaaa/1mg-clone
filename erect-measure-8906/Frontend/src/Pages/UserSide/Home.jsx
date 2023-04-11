@@ -8,7 +8,7 @@ import Pathology from "../../Components/UserSide/Pathology";
 import Homeopathic from "../../Components/UserSide/Homeopathic";
 import SlideShow from "../../Components/UserSide/SlideShow";
 import Information from "../../Components/UserSide/Information";
-import Mgmatters from "../../Components/UserSide/Mgmatters";
+import Medi from "../../Components/UserSide/Medi";
 export default function Home() {
   const Shop_by_health_concerns = [
     {
@@ -578,7 +578,7 @@ export default function Home() {
       style={{ width: "100%", overflow: "hidden", padding: "20px" }}
     >
         <SlideShow />
-      <h3 className="tagname">Shop by health concerns</h3>
+      <h2 className="tagname">Shop by health concerns</h2>
       <div style={{ background: "white " }}>
         <Slider {...slider1}>
           {Shop_by_health_concerns.map((item, index) => (
@@ -586,14 +586,14 @@ export default function Home() {
           ))}
         </Slider>
       </div>
-      <h3 className="tagname"> Featured Brands</h3>
+      <h2 className="tagname"> Featured Brands</h2>
       <Slider {...slider2}>
         {Featured_Brands.map((item) => (
           <FeaturedBrands name={item.name} img={item.img} />
         ))}
       </Slider>
 
-      <h3 className="tagname">Full body health checkups</h3>
+      <h2 className="tagname">Full body health checkups</h2>
       <Slider {...slider3}>
         {Full_body_health_checkups.map((item, index) => (
           <FullBody
@@ -608,7 +608,7 @@ export default function Home() {
           />
         ))}
       </Slider>
-      <h3 className="tagname">Pathology Tests | Up to 70% off</h3>
+      <h2 className="tagname">Pathology Tests | Up to 70% off</h2>
       <Slider {...slider3}>
         {Pathol.map((item) => (
           <Pathology
@@ -621,7 +621,7 @@ export default function Home() {
           />
         ))}
       </Slider>
-      <h3 className="tagname">Homeopathic care for cold & cough</h3>
+      <h2 className="tagname">Homeopathic care for cold & cough</h2>
       
       <Slider {...slider7}>
         {homeo.map((item) => (
@@ -636,6 +636,8 @@ export default function Home() {
           />
         ))}
       </Slider>
+      <h2 className="tagname">Our Top Brands</h2>
+      <Medi/>
       <Information/>
     </div>
   );

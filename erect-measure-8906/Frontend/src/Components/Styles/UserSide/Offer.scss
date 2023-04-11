@@ -1,0 +1,84 @@
+#offer.offer{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    width: 80%;
+    justify-content: space-between;
+    gap:10px;
+    margin: auto;
+    text-align: center;
+    
+    
+    .card_offer{
+        padding: 10px 15px;
+        // margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: space-between;
+        overflow: hidden;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        border-radius: 6px;
+       
+      
+        h3{
+            text-overflow:ellipsis ;
+            white-space: nowrap;
+            
+        }
+        
+        .brand_image{
+            display: flex;
+            justify-content: center;
+            img{
+                height: 200px;
+                object-fit: cover;
+                align-self: center;
+                overflow: hidden;
+            }
+            
+        }
+        .title{
+            overflow: hidden;
+            p{
+                display: flex;
+                gap: 10px;
+                justify-content: space-between;
+                font-weight: 600;
+                    font-size: 14px;
+                    margin: 5px 0;
+            }
+            span{
+                font-weight: bold;
+                color: black;
+                font-size: 16px;
+            }
+            button{
+                padding: 10px 20px;
+                background-color: tomato;
+                border: none;
+                color: white;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+        }
+    }
+    .card_offer:hover{
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+        cursor: pointer;
+    }
+    
+}
+
+@media screen and (max-width: 900px) {
+    #offer.offer{
+        grid-template-columns: 50% 50% ;
+    }
+
+}
+
+
+@media screen and (max-width: 600px) {
+    #offer.offer{
+        grid-template-columns: 100% ;
+    }
+}

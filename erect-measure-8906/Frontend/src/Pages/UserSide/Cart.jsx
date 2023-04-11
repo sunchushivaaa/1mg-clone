@@ -13,7 +13,7 @@ const Cart = () => {
 
   useEffect(() => {
     // get the cart data from local storage
-    let cart_data = JSON.parse(localStorage.getItem("cart_data"));
+    let cart_data = JSON.parse(localStorage.getItem("cart_data"))||[];
     if (cart_data) {
       // if there are items in the cart, set the items state
       setItems(cart_data);

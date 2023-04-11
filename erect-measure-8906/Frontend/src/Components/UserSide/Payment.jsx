@@ -86,12 +86,13 @@ const end=()=>{
   ]);
 
 
+  let careplan=localStorage.getItem("threemonth")
   const [currentindex, setCurrentindex] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
 
   useEffect(() => {
     // get the cart data from local storage
-    let cart_data = JSON.parse(localStorage.getItem("cart_data"));
+    let cart_data = JSON.parse(localStorage.getItem("cart_data"))||[];
    
     let sum = 0;
 
@@ -331,7 +332,7 @@ const end=()=>{
             <p>₹350</p>
             <div>
               <p>
-                Total price : <span>{totalPrice}</span>
+                Total price : <span>₹{totalPrice>0?totalPrice:careplan}</span>
               </p>
             </div>
           </div>
