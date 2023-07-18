@@ -35,7 +35,9 @@
  <ul>
  <li>
  <h3>Home Page</h3>
+
  <img src = "https://www.linkpicture.com/q/Screenshot-2147.png" alt = "5mg"/>
+
  </li>
  <li>
  <h3>Category Page</h3>
