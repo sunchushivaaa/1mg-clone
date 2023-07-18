@@ -4,9 +4,7 @@ import { Link } from "react-router-dom";
 import { toast } from "react-hot-toast";
 
 const Cart = () => {
-  // define the state for the items added to the cart
   const [items, setItems] = useState([]);
-  // define the state for the total price of all items
   const [totalPrice, setTotalPrice] = useState(0);
   const [itemsToRemove, setItemsToRemove] = useState([]);
   const [total_product, setTotalproduct] = useState(0);
@@ -15,7 +13,6 @@ const Cart = () => {
     // get the cart data from local storage
     let cart_data = JSON.parse(localStorage.getItem("cart_data"))||[];
     if (cart_data) {
-      // if there are items in the cart, set the items state
       setItems(cart_data);
     } else {
       // if there are no items in the cart, alert the user
@@ -25,7 +22,7 @@ const Cart = () => {
 
     cart_data.forEach((ele) => {
       // calculate the total price of all items in the cart
-      sum += ele.price;
+      sum += ele.discountedPrice;
     });
     // set the total price state
     setTotalPrice(sum);
@@ -61,7 +58,7 @@ const Cart = () => {
 
     let sum = 0;
     newCartData.forEach((ele) => {
-      sum += ele.price * ele.quantity;
+      sum += ele.discountedPrice * ele.quantity;
     });
     setTotalPrice(sum);
     setTotalproduct(total_product - 1);
@@ -88,7 +85,7 @@ const Cart = () => {
           >
             <img src={product.image} alt="Product Image" />
             <p>{product.title}</p>
-            <p>₹{product.price}</p>
+            <p>₹{product.discountedPrice}</p>
             <button onClick={() => handleRemoveProduct(index)}>-</button>
             <p>Qty: {product.quantity}</p>
             <button onClick={() => handleAddProduct(index)}>+</button>

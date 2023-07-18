@@ -36,11 +36,19 @@ export default function ProductDetail() {
         </div>
         <div className="detailcard">
           <h2>{details.title}</h2>
-          <p>₹{details.price}</p>
-          <p>Discounts on this product: ₹{details.discount}</p>
-          <p>Category:{details.category}</p>
-          <p>Rating:⭐{details.rating}</p>
-          <p>Available on Emi</p>
+          <p><strong>Price:</strong>₹ {(Number(details.discountedPrice)).toFixed(2)}</p>
+          {/* <p><strong>Discounts:</strong> ₹{details.discount}</p> */}
+          <p><strong>Category:</strong><span>{(details.category)}</span></p>
+          <p><strong>Rating:</strong><span>{Number(details.rating).toFixed(1)}⭐</span></p>
+          {Number(details.rating) >= 3 ? (
+            <p>
+              <i>Available on Emi</i>
+            </p>
+          ) : (
+            <p className="rating-below-three">
+              <i>Not Available on Emi</i>
+            </p>
+          )}
           <button onClick={addtocart}>Add to Cart</button>
         </div>
       </div>
