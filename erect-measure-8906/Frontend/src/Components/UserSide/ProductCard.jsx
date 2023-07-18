@@ -11,10 +11,11 @@ const ProductCard = ({ image, title, discount, rating, price, category }) => {
     localStorage.setItem("medicine_details", JSON.stringify(item));
     navigate("/medicinesdetails");
   };
+  const discountedPrice = price - (price * discount) / 100;
   return (
     <Wrapper
       onClick={() =>
-        medicine_detail({ image, title, discount, rating, price, category })
+        medicine_detail({ image, title, discount, rating, price,discountedPrice, category })
       }
     >
       <img
@@ -27,7 +28,7 @@ const ProductCard = ({ image, title, discount, rating, price, category }) => {
       </p>
       <p style={{ margin: "8px 20px" }}>{category}</p>
       <Button>
-        {rating}
+        {(rating).toFixed(1)}
         <span>
           <AiOutlineStar />
         </span>
@@ -51,7 +52,8 @@ const ProductCard = ({ image, title, discount, rating, price, category }) => {
         }}
       >
         <p style={{ margin: "8px 20px", fontSize: "20px", fontWeight: "bold" }}>
-          ₹{price}
+        <OriginalPrice>₹{price}</OriginalPrice>
+          <DiscountedPrice>₹{(discountedPrice).toFixed(2)}</DiscountedPrice>
         </p>
         <Addbutton
           style={{ marginRight: "20px", fontWeight: "bold", color: "white" }}
@@ -106,4 +108,12 @@ const Addbutton = styled.button`
     color: #fff;
     text-decoration: none;
   }
+`;
+const OriginalPrice = styled.span`
+  text-decoration: line-through;
+  margin-right: 10px;
+`;
+
+const DiscountedPrice = styled.span`
+  color: red;
 `;

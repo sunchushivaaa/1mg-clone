@@ -12,6 +12,24 @@
       display: flex;
       flex-direction: column;
       gap: 20px;
+      // text-align: center;
+      p{
+        display: flex;
+        justify-content: space-between;
+        // text-align: center;
+        width: 40%;
+        align-items: center;
+        // gap: 20px;
+        // margin: auto;
+        text-align: end;
+        font-weight: 600;
+        color: rgb(58, 58, 58);
+        strong{
+          // margin-right: 50px;
+          font-size: 20px;
+          color: black;
+        }
+      }
     }
     button {
       background-image: linear-gradient(
@@ -33,6 +51,8 @@
       border: none;
       font-weight: bold;
       font-size: 15px;
+      // width: 70%;
+      // margin: auto;
     }
 
     button:hover {
@@ -127,9 +147,13 @@
         h2 {
           text-align: center;
         }
+        p{
+          width: 100%;
+        }
         button {
           width: 100%;
         }
+       
       }
     }
     .about-us {
