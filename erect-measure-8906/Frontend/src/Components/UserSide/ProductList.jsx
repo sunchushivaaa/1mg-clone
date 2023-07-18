@@ -34,17 +34,19 @@ const ProductList = ({ page, limit }) => {
 
   return (
     <div className="product_main">
-      {loading && (
-        <div style={{display:"flex",alignItems:"center"}}>
-          <div className="loading"></div> <h1 style={{ textAlign: "center" }}>...Loading</h1>
+      {loading ? (
+        <div style={{ display: "flex", alignItems: "center" }}>
+          <div className="loading"></div>
+          <h1 style={{ textAlign: "center" }}>...Loading</h1>
         </div>
-      )}
-      {error && <h1 style={{ textAlign: "center" }}>...Error</h1>}
-
-      {data &&
+      ) : error ? (
+        <h1 style={{ textAlign: "center" }}>...Error</h1>
+      ) : (
+        data &&
         data.map((el) => {
           return <ProductCard key={el.id} {...el} />;
-        })}
+        })
+      )}
     </div>
   );
 };
